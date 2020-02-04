@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Balanceamento.unity
+    guid: a40efa7500ff5f546a4d3bc7f218aeec
+  - enabled: 1
+    path: Assets/Scenes/Parabens.unity
+    guid: 756acd9c8882838498748932bc9f1270
+  - enabled: 1
+    path: Assets/Scenes/Pontuacao.unity
+    guid: 0cc1e8b529e48314db300028504b4a53
+  - enabled: 1
+    path: Assets/Scenes/Principal.unity
+    guid: 35cb4bdbab3dc874ab074ddf20c3f4bc
+  - enabled: 1
+    path: Assets/Scenes/Regras.unity
+    guid: d96da4b25bdee834989829ef3d8c1297
+  - enabled: 1
+    path: Assets/Scenes/Sorteio.unity
+    guid: 60b19b5da910e9d4683443c6ddc5df54
+  - enabled: 1
+    path: Assets/Scenes/Sobre.unity
+    guid: ea7ac25ee959151499a29fb5bcacd2fc
+  m_configObjects: {}
