@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Henrique Barros\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Henrique Barros\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_roletaBalanceada.556135137.00" t="ExcludeRecursive" />
+    <e p="D:\Documentos\Projetos\roletaBalanceada" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scenes" t="Include">
+          <e p="BancoDeDados.cs" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="controller" t="Include">
+            <e p="PontuacaoController.cs" t="Include" />
+            <e p="PrincipalController.cs" t="Include" />
+            <e p="RegrasController.cs" t="Include" />
+            <e p="SorteioMotor.cs" t="Include" />
+          </e>
+          <e p="modelo" t="Include">
+            <e p="Atomo.cs" t="Include" />
+            <e p="AtomoQuantificado.cs" t="Include" />
+            <e p="Equacao.cs" t="Include" />
+            <e p="Grupo.cs" t="Include" />
+            <e p="Jogador.cs" t="Include" />
+            <e p="Molecula.cs" t="Include" />
+            <e p="MoleculaCompoe.cs" t="Include" />
+            <e p="MoleculaForma.cs" t="Include" />
+            <e p="Roleta.cs" t="Include" />
+          </e>
+          <e p="view" t="Include">
+            <e p="Formule.cs" t="Include" />
+            <e p="FormuleListAdapter.cs" t="Include" />
+            <e p="Roulette.cs" t="Include" />
+            <e p="RulesListAdapter.cs" t="Include" />
+            <e p="ScoreListAdapter.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="roletaBalanceada.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
