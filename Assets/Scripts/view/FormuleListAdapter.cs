@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using controller;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +16,7 @@ public class FormuleListAdapter : MonoBehaviour
         reagentes.Find("ViewPort/Content").GetComponent<RectTransform>().position = new Vector3(31.90425f,-259.0114f,0);
         produtos.Find("ViewPort/Content").GetComponent<RectTransform>().position = new Vector3(183.0772f,-259.0114f,0);
     }
+    
     private List<FormuleItemModel[]> loadFormules()
     {
         List<FormuleItemModel[]> result = new List<FormuleItemModel[]>();
@@ -29,6 +31,8 @@ public class FormuleListAdapter : MonoBehaviour
         produtos[1] = new FormuleItemModel("H2 ");
         produtos[2] = new FormuleItemModel("Fe2(SO4 )3");
         result.Add(produtos);
+
+        Debug.Log(PrincipalController.idCor);
         
         return result;
     }

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using controller;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = System.Random;
 
 public class Roulette : MonoBehaviour
@@ -9,7 +11,7 @@ public class Roulette : MonoBehaviour
     public GameObject roulette; 
     public GameObject spinner;
     private bool spinnerDirection;
-    private bool isRotate;
+    public static bool isRotate;
     private int speed;
     private int trueSpeed;
     // Start is called before the first frame update
@@ -57,7 +59,7 @@ public class Roulette : MonoBehaviour
             moveSpinner(0);
             isRotate = false;
             trueSpeed = 0;
-            Debug.Log(verifyResult());
+            verifyResult();
             return;
         }
         else
@@ -101,41 +103,56 @@ public class Roulette : MonoBehaviour
         return true;
     }
 
-    private String verifyResult()
+    private void verifyResult()
     {
         float angle = roulette.GetComponent<Transform>().localEulerAngles.z;
 
-        if (angle <= 45)//vermelho
+        if (angle <= 45)//vermelho de baixo
         {
-            return "Vermelho";
+            PrincipalController.idCor = 1;
+            SceneManager.LoadScene(0);
+            return;
         }
-        if (angle <= 90)//amarelo
+        if (angle <= 90)//amarelo de baixo
         {
-            return "Amarelo";
+            PrincipalController.idCor = 2;
+            SceneManager.LoadScene(0);
+            return;
         }
-        if (angle<=135)//azul
+        if (angle<=135)//azul de cima
         {
-            return "Azul";
+            PrincipalController.idCor = 3;
+            SceneManager.LoadScene(0);
+            return;
         }
-        if (angle<=180)//verde
+        if (angle<=180)//verde de cima
         {
-            return "Verde";
+            PrincipalController.idCor = 4;
+            SceneManager.LoadScene(0);
+            return;
         }
-        if (angle<=225)//vermelho
+        if (angle<=225)//vermelho de cima
         {
-            return "Vermelho";
+            PrincipalController.idCor = 5;
+            SceneManager.LoadScene(0);
+            return;
         }
-        if (angle<=270)//amarelo
+        if (angle<=270)//amarelo de cima
         {
-            return "Amarelo";
+            PrincipalController.idCor = 6;
+            SceneManager.LoadScene(0);
+            return;
         }
-        if (angle<=315)//azul
+        if (angle<=315)//azul de baixo
         {
-            return "Azul";
+            PrincipalController.idCor = 7;
+            SceneManager.LoadScene(0);
+            return;
         }
-        //verde
-        return "Verde";
-
+        
+        //verde de baixo
+        PrincipalController.idCor = 8;
+        SceneManager.LoadScene(0);
     }
 
     private void moveSpinner(int velocity)
