@@ -1,12 +1,14 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;	
+using UnityEngine;
+using System.Data;
+using Mono.Data.SqliteClient;
 
 
 public class MoleculaForma
 {
-	private String tipo; //Reagente ou Produto
+    private int id;
+	private string tipo; //Reagente ou Produto
 
 	private int sequencia;
 
@@ -14,10 +16,38 @@ public class MoleculaForma
 
 	private Molecula molecula;
 
-	public String formulaPorExtenso()
-	{
-		return null;
-	}
+    public string Tipo { get => tipo; set => tipo = value; }
+    public int Sequencia { get => sequencia; set => sequencia = value; }
+    public int Balanco { get => balanco; set => balanco = value; }
+    public Molecula Molecula { get => molecula; set => molecula = value; }
+    public int Id { get => id; set => id = value; }
+
+    public static void carregarMoleculaForma(Equacao equacao) {
+
+        Dictionary<int, Molecula> moleculas = Molecula.todasMoleculas();
+
+            IDataReader reader = Conexoes.pegarReader($"SELECT id, molecula_id, tipo, sequencia, balanco FROM molecula_forma where equacao_id = {equacao.Id} order by sequencia");
+            while (reader.Read())
+            {
+                MoleculaForma moleculaForma = new MoleculaForma();
+                moleculaForma.Id = reader.GetInt32(0);
+                moleculaForma.Molecula = moleculas[reader.GetInt32(1)];
+                moleculaForma.Tipo = reader.GetString(2);
+                moleculaForma.Sequencia = reader.GetInt32(3);
+                moleculaForma.Balanco = reader.GetInt32(4);
+                if(moleculaForma.Tipo == "reagente"){
+                    equacao.Reagente.Add(moleculaForma);
+                } else{
+                    equacao.Produto.Add(moleculaForma);
+            }
+
+            }
+            Conexoes.fecharConexao();
+
+       
+
+    }
+
 
 }
 
