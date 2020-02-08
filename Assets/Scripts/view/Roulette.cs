@@ -70,7 +70,7 @@ public class Roulette : MonoBehaviour
         speed --;
     }
 
-    private int generateRandom(int min, int max)
+    public static int generateRandom(int min, int max)
     {
         Random random = new Random();
 

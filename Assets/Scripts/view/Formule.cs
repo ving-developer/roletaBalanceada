@@ -31,4 +31,9 @@ public class Formule : MonoBehaviour
         if(int.Parse(formuleQuanity.text.ToString())>0)
             formuleQuanity.text = (int.Parse(formuleQuanity.text.ToString())-1).ToString();
     }
+
+    public int getQuanity()
+    {
+        return int.Parse(formuleQuanity.text);
+    }
 }

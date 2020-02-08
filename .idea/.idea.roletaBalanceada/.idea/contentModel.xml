@@ -10,7 +10,11 @@
           <e p="BancoDeDados.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="controladores" t="Include">
+            <e p="controladorPrimeiraTela.cs" t="Include" />
+          </e>
           <e p="controller" t="Include">
+            <e p="BalanceamentoController.cs" t="Include" />
             <e p="PontuacaoController.cs" t="Include" />
             <e p="PrincipalController.cs" t="Include" />
             <e p="RegrasController.cs" t="Include" />
@@ -19,6 +23,7 @@
           <e p="modelo" t="Include">
             <e p="Atomo.cs" t="Include" />
             <e p="AtomoQuantificado.cs" t="Include" />
+            <e p="Conexoes.cs" t="Include" />
             <e p="Equacao.cs" t="Include" />
             <e p="Grupo.cs" t="Include" />
             <e p="Jogador.cs" t="Include" />

@@ -8,75 +8,55 @@ using UnityEngine.UI;
 public class FormuleListAdapter : MonoBehaviour
 {
     public RectTransform prefab;
+    public RectTransform plusSing;
     public RectTransform reagentes;
     public RectTransform produtos;
     void Start()
     {
+        Equacao.todasEquacoes();
         updateItens(loadFormules());
         reagentes.Find("ViewPort/Content").GetComponent<RectTransform>().position = new Vector3(31.90425f,-259.0114f,0);
         produtos.Find("ViewPort/Content").GetComponent<RectTransform>().position = new Vector3(183.0772f,-259.0114f,0);
     }
     
-    private List<FormuleItemModel[]> loadFormules()
-    {
-        List<FormuleItemModel[]> result = new List<FormuleItemModel[]>();
-        
-        FormuleItemModel[] reagentes = new FormuleItemModel[2];
-        reagentes[0] = new FormuleItemModel("Mg");
-        reagentes[1] = new FormuleItemModel("HCl ");
-        result.Add(reagentes);
-        
-        FormuleItemModel[] produtos = new FormuleItemModel[3];
-        produtos[0] = new FormuleItemModel("MgCl2");
-        produtos[1] = new FormuleItemModel("H2 ");
-        produtos[2] = new FormuleItemModel("Fe2(SO4 )3");
-        result.Add(produtos);
-
-        Debug.Log(PrincipalController.idCor);
-        
-        return result;
-    }
+    private Equacao loadFormules()
+    {return PrincipalController.enciclopediaEquacoes[Roulette.generateRandom(1,20)];}
     
-    private void updateItens(List<FormuleItemModel[]> models)
+    private void updateItens(Equacao equacao)
     {
-        foreach (var reagentes in models[0])
+        BalanceamentoController.CurrentEquation = equacao;
+        Debug.Log("Reagentes:");
+        foreach (var reagentes in equacao.Reagente)
         {
             var instance = GameObject.Instantiate(prefab.gameObject) as GameObject;
             instance.transform.SetParent(this.reagentes.Find("ViewPort/Content"),false);
             initializeItemView(instance,reagentes);
+            BalanceamentoController.addFormule(instance);
+            Debug.Log(reagentes.Balanco);
+            if (!reagentes.Equals(equacao.Reagente[equacao.Reagente.Count - 1]))
+            {
+                var plusSing = GameObject.Instantiate(this.plusSing.gameObject) as GameObject;
+                plusSing.transform.SetParent(this.reagentes.Find("ViewPort/Content"),false);
+            }
         }
-        
-        foreach (var produtos in models[1])
+        Debug.Log("Produtos:");
+        foreach (var produtos in equacao.Produto)
         {
             var instance = GameObject.Instantiate(prefab.gameObject) as GameObject;
             instance.transform.SetParent(this.produtos.Find("ViewPort/Content"),false);
             initializeItemView(instance,produtos);
+            Debug.Log(produtos.Balanco);
+            BalanceamentoController.addFormule(instance);
+            if (!produtos.Equals(equacao.Produto[equacao.Produto.Count - 1]))
+            {
+                var plusSing = GameObject.Instantiate(this.plusSing.gameObject) as GameObject;
+                plusSing.transform.SetParent(this.produtos.Find("ViewPort/Content"),false);
+            }
         }
     }
     
-    private void initializeItemView(GameObject viewGameObject,  FormuleItemModel model)
+    private void initializeItemView(GameObject viewGameObject,  MoleculaForma molecula)
     {
-        FormuleItemView view = new FormuleItemView(viewGameObject.transform);
-        view.formuleName.text = model.formuleName;
-    }
-    
-    public class FormuleItemView
-    {
-        public Text formuleName;
-
-        public FormuleItemView(Transform rootView)
-        {
-            formuleName = rootView.Find("FormuleName").GetComponent<Text>();
-        }
-    }
-    
-    public class FormuleItemModel
-    {
-        public String formuleName;
-
-        public FormuleItemModel(String formuleName)
-        {
-            this.formuleName = formuleName;
-        }
+        viewGameObject.transform.Find("FormuleName").GetComponent<Text>().text=molecula.Molecula.ToString();
     }
 }
