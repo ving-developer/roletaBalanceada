@@ -45,11 +45,13 @@ public class Equacao{
             }
             Conexoes.fecharConexao();
 
+            foreach (int index in equacoes.Keys){
+                MoleculaForma.carregarMoleculaForma(equacoes[index]);
+            }
+
         }
 
-        foreach (int index in equacoes.Keys){
-            MoleculaForma.carregarMoleculaForma(equacoes[index]);
-        }
+        
 
 
 

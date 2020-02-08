@@ -39,9 +39,11 @@ public class Molecula
                 moleculas[index].AtomosQuantificados = AtomoQuantificado.carregar(moleculas[index]);
             }
 
+
+            MoleculaCompoe.carregarComposicao(moleculas);
         }
 
-        MoleculaCompoe.carregarComposicao(moleculas);
+        
 
 
 
