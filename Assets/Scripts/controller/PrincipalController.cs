@@ -8,11 +8,13 @@ namespace controller
         public static List<Jogador> jogadores;
         public static bool jogada = false;
         public static int idCor = -1;
+        public static Dictionary<int, Equacao> enciclopediaEquacoes;
         
         // Start is called before the first frame update
         void Start()
         {
             jogadores = new List<Jogador>();
+            enciclopediaEquacoes = Equacao.todasEquacoes();
         }
         
         public void umJogador()
