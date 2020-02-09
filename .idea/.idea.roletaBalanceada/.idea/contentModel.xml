@@ -15,6 +15,7 @@
           </e>
           <e p="controller" t="Include">
             <e p="BalanceamentoController.cs" t="Include" />
+            <e p="NucleoController.cs" t="Include" />
             <e p="PontuacaoController.cs" t="Include" />
             <e p="PrincipalController.cs" t="Include" />
             <e p="RegrasController.cs" t="Include" />

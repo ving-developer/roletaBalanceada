@@ -5,32 +5,27 @@ namespace controller
 {
     public class PrincipalController : MonoBehaviour
     {
-        public static List<Jogador> jogadores;
-        public static bool jogada = false;
-        public static int idCor = -1;
-        public static Dictionary<int, Equacao> enciclopediaEquacoes;
         
         // Start is called before the first frame update
         void Start()
         {
-            jogadores = new List<Jogador>();
-            enciclopediaEquacoes = Equacao.todasEquacoes();
+            
         }
         
         public void umJogador()
         {
             Jogador jogadorUm = new Jogador(0,0);
-            jogadores.Add(jogadorUm);
+            NucleoController.jogadores.Add(jogadorUm);
             SceneManager.LoadScene(5);
         }
     
         public void doisJogadores()
         {
             Jogador jogadorUm = new Jogador(0,0);
-            jogadores.Add(jogadorUm);
+            NucleoController.jogadores.Add(jogadorUm);
             
             Jogador jogadorDois = new Jogador(0,0);
-            jogadores.Add(jogadorDois);
+            NucleoController.jogadores.Add(jogadorDois);
             
             SceneManager.LoadScene(5);
         }

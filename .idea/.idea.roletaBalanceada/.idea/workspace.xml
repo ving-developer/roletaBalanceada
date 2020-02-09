@@ -4,13 +4,10 @@
     <list default="true" id="a87ee69a-7cc5-4483-9600-881b6d692229" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.roletaBalanceada/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.roletaBalanceada/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.roletaBalanceada/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.roletaBalanceada/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Mono.Data.SqliteClient.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Mono.Data.SqliteClient.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/sqlite3.def.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/sqlite3.def.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/sqlite3.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/sqlite3.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Balanceamento.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Balanceamento.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sorteio.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sorteio.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/controller/BalanceamentoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/controller/BalanceamentoController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/controller/PrincipalController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/controller/PrincipalController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/modelo/Jogador.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/modelo/Jogador.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/view/Formule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/view/Formule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/controller/SorteioMotor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/controller/SorteioMotor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/view/FormuleListAdapter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/view/FormuleListAdapter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/view/Roulette.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/view/Roulette.cs" afterDir="false" />
     </list>
@@ -30,11 +27,14 @@
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/BtnSelection.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Balanceamento.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/SorteioMotor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/PontuacaoController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/NucleoController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/PrincipalController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/Roulette.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/Formule.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/FormuleListAdapter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/BalanceamentoController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/BalanceamentoController.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/modelo/Molecula.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/modelo/Jogador.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -45,15 +45,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/SorteioMotor].cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/PrincipalMotor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/JogadorController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/controller/SorteioMotor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/modelo/Jogador.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/modelo/MoleculaForma.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/view/Roulette.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/modelo/Equacao.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/controller/PrincipalController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/Formule.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/controller/PrincipalController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/controller/Nucleo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/view/Roulette.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/controller/NucleoController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/FormuleListAdapter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/BalanceamentoController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/controller/SorteioMotor.cs" />
       </list>
     </option>
   </component>
@@ -107,7 +109,9 @@
       <option name="presentableId" value="Default" />
       <updated>1580912451415</updated>
       <workItem from="1580912479692" duration="16425000" />
-      <workItem from="1581096199525" duration="16208000" />
+      <workItem from="1581096199525" duration="16663000" />
+      <workItem from="1581173000304" duration="2219000" />
+      <workItem from="1581205631259" duration="9737000" />
     </task>
     <servers />
   </component>
@@ -116,6 +120,17 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="301" y="73" key="SettingsEditor" timestamp="1581102486202">
       <screen x="0" y="0" width="1600" height="860" />

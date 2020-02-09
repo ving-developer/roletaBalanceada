@@ -109,50 +109,66 @@ public class Roulette : MonoBehaviour
 
         if (angle <= 45)//vermelho de baixo
         {
-            PrincipalController.idCor = 1;
+            NucleoController.idCor = 1;
             SceneManager.LoadScene(0);
+            NucleoController.reward[0] = 40;
+            NucleoController.reward[1] = 0;
             return;
         }
         if (angle <= 90)//amarelo de baixo
         {
-            PrincipalController.idCor = 2;
+            NucleoController.idCor = 2;
             SceneManager.LoadScene(0);
+            NucleoController.reward[0] = 30;
+            NucleoController.reward[1] = 0;
             return;
         }
         if (angle<=135)//azul de cima
         {
-            PrincipalController.idCor = 3;
+            NucleoController.idCor = 3;
             SceneManager.LoadScene(0);
+            NucleoController.reward[0] = 30;
+            NucleoController.reward[1] = -10;
             return;
         }
         if (angle<=180)//verde de cima
         {
-            PrincipalController.idCor = 4;
+            NucleoController.idCor = 4;
             SceneManager.LoadScene(0);
+            NucleoController.reward[0] = 20;
+            NucleoController.reward[1] = -10;
             return;
         }
         if (angle<=225)//vermelho de cima
         {
-            PrincipalController.idCor = 5;
+            NucleoController.idCor = 5;
             SceneManager.LoadScene(0);
+            NucleoController.reward[0] = 50;
+            NucleoController.reward[1] = -10;
             return;
         }
         if (angle<=270)//amarelo de cima
         {
-            PrincipalController.idCor = 6;
+            NucleoController.idCor = 6;
             SceneManager.LoadScene(0);
+            NucleoController.reward[0] = 40;
+            NucleoController.reward[1] = -10;
             return;
         }
         if (angle<=315)//azul de baixo
         {
-            PrincipalController.idCor = 7;
+            NucleoController.idCor = 7;
             SceneManager.LoadScene(0);
+            NucleoController.reward[0] = 20;
+            NucleoController.reward[1] = 0;
             return;
         }
         
         //verde de baixo
-        PrincipalController.idCor = 8;
+        NucleoController.idCor = 8;
         SceneManager.LoadScene(0);
+        NucleoController.reward[0] = 10;
+        NucleoController.reward[1] = -10;
     }
 
     private void moveSpinner(int velocity)
