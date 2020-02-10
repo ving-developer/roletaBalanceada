@@ -34,7 +34,7 @@ public class BalanceamentoController : MonoBehaviour
             if (!verifyOver())
                 SceneManager.LoadScene(5);
             else
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
         }
         else
         {
@@ -46,7 +46,7 @@ public class BalanceamentoController : MonoBehaviour
             if (!verifyOver())
                 SceneManager.LoadScene(5);
             else
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
         }
         
         if(NucleoController.jogadores.Count>1)
@@ -55,7 +55,7 @@ public class BalanceamentoController : MonoBehaviour
 
     private bool verifyOver()
     {
-        if (NucleoController.rodada < 2)
+        if (NucleoController.rodada < 3)
             return false;
         return true;
     }

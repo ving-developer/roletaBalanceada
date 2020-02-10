@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class Clock : MonoBehaviour
 {
     public EventSystem eventSistem;
-    private const int TOTAL_SECONDS = 1;
+    private const int TOTAL_SECONDS = 3;
     private float day;
     private const int DEGREES_PER_DAY = 360;
     private Transform clockHandTransform;

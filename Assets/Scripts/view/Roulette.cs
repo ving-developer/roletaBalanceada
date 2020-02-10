@@ -110,7 +110,7 @@ public class Roulette : MonoBehaviour
         if (angle <= 45)//vermelho de baixo
         {
             NucleoController.idCor = 1;
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
             NucleoController.reward[0] = 40;
             NucleoController.reward[1] = 0;
             return;
@@ -118,7 +118,7 @@ public class Roulette : MonoBehaviour
         if (angle <= 90)//amarelo de baixo
         {
             NucleoController.idCor = 2;
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
             NucleoController.reward[0] = 30;
             NucleoController.reward[1] = 0;
             return;
@@ -126,7 +126,7 @@ public class Roulette : MonoBehaviour
         if (angle<=135)//azul de cima
         {
             NucleoController.idCor = 3;
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
             NucleoController.reward[0] = 30;
             NucleoController.reward[1] = -10;
             return;
@@ -134,7 +134,7 @@ public class Roulette : MonoBehaviour
         if (angle<=180)//verde de cima
         {
             NucleoController.idCor = 4;
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
             NucleoController.reward[0] = 20;
             NucleoController.reward[1] = -10;
             return;
@@ -142,7 +142,7 @@ public class Roulette : MonoBehaviour
         if (angle<=225)//vermelho de cima
         {
             NucleoController.idCor = 5;
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
             NucleoController.reward[0] = 50;
             NucleoController.reward[1] = -10;
             return;
@@ -150,7 +150,7 @@ public class Roulette : MonoBehaviour
         if (angle<=270)//amarelo de cima
         {
             NucleoController.idCor = 6;
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
             NucleoController.reward[0] = 40;
             NucleoController.reward[1] = -10;
             return;
@@ -158,7 +158,7 @@ public class Roulette : MonoBehaviour
         if (angle<=315)//azul de baixo
         {
             NucleoController.idCor = 7;
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
             NucleoController.reward[0] = 20;
             NucleoController.reward[1] = 0;
             return;
@@ -166,7 +166,7 @@ public class Roulette : MonoBehaviour
         
         //verde de baixo
         NucleoController.idCor = 8;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
         NucleoController.reward[0] = 10;
         NucleoController.reward[1] = -10;
     }

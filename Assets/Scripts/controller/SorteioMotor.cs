@@ -22,7 +22,7 @@ public class SorteioMotor : MonoBehaviour
         {
             jogadorUm = GameObject.Instantiate(jogadorUm.gameObject) as GameObject;
             jogadorUm.transform.SetParent(canvas, false);
-            jogadorUm.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, -1082, 0);
+            jogadorUm.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 199, 0);
             jogadorUm.GetComponent<RectTransform>().Find("Pontos").GetComponent<Text>().text =
                 NucleoController.jogadores[0].getPontuacao();
             jogadorUm.GetComponent<RectTransform>().Find("Tempo").GetComponent<Text>().text =
@@ -46,14 +46,14 @@ public class SorteioMotor : MonoBehaviour
         }
         
         if(NucleoController.jogadores.Count == 1)
-            playerSelector.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, -1078, -1005.874f);
+            playerSelector.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 202, -1005.874f);
         else if (NucleoController.jogada)
         {
-            playerSelector.GetComponent<RectTransform>().anchoredPosition = new Vector3(-221, -1078, -1005.874f);
+            playerSelector.GetComponent<RectTransform>().anchoredPosition = new Vector3(-215, 202, -1005.874f);
         }
         else
         {
-            playerSelector.GetComponent<RectTransform>().anchoredPosition = new Vector3(197, -1078, -1005.874f);
+            playerSelector.GetComponent<RectTransform>().anchoredPosition = new Vector3(197, 202, -1005.874f);
         }
     }
 }

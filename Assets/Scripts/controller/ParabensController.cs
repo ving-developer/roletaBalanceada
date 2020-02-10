@@ -61,7 +61,7 @@ public class ParabensController : MonoBehaviour
             if (jogadores.Count > 1)
             {
                 jogadores.RemoveAt(0);
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
             }
             else
                 saveAndContinue();

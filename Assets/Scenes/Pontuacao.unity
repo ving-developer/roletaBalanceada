@@ -280,10 +280,10 @@ RectTransform:
   m_Father: {fileID: 915009853}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.09277779, y: 0.20556252}
-  m_AnchorMax: {x: 0.9084445, y: 0.8652188}
-  m_AnchoredPosition: {x: 1.2000122, y: -1.3000488}
-  m_SizeDelta: {x: 2.100006, y: 3.2000122}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1.7000122, y: 43.69995}
+  m_SizeDelta: {x: 589.1, y: 847.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &213055698
 MonoBehaviour:
@@ -298,7 +298,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 2093126259097143810, guid: 75019a3ea7689ea44bf29e6668c0e8ff, type: 3}
-  listView: {fileID: 213055699}
   content: {fileID: 1693608821}
 --- !u!114 &213055699
 MonoBehaviour:
@@ -616,10 +615,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 720, y: 1280}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -887,7 +886,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -423.78006}
+  m_AnchoredPosition: {x: 0, y: -423.6}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1693608822

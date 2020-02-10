@@ -37,12 +37,12 @@ namespace controller
     
         public void balanceamento()
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
     
         public void pontuacao()
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
     
         public void sobre()
