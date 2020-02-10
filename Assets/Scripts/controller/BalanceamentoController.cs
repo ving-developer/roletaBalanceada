@@ -30,8 +30,11 @@ public class BalanceamentoController : MonoBehaviour
                 NucleoController.jogadores[0].addPontuacao(NucleoController.reward[0]);
             else
                 NucleoController.jogadores[1].addPontuacao(NucleoController.reward[0]);
-            
-            SceneManager.LoadScene(5);
+
+            if (!verifyOver())
+                SceneManager.LoadScene(5);
+            else
+                SceneManager.LoadScene(1);
         }
         else
         {
@@ -40,11 +43,21 @@ public class BalanceamentoController : MonoBehaviour
             else
                 NucleoController.jogadores[1].addPontuacao(NucleoController.reward[1]);
             
-            SceneManager.LoadScene(5);
+            if (!verifyOver())
+                SceneManager.LoadScene(5);
+            else
+                SceneManager.LoadScene(1);
         }
         
         if(NucleoController.jogadores.Count>1)
             NucleoController.jogada = !NucleoController.jogada;
+    }
+
+    private bool verifyOver()
+    {
+        if (NucleoController.rodada < 2)
+            return false;
+        return true;
     }
 
     private bool verifyResult()
