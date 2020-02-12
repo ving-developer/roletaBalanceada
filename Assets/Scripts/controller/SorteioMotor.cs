@@ -20,7 +20,7 @@ public class SorteioMotor : MonoBehaviour
 
         if (NucleoController.jogadores.Count==1)
         {
-            jogadorUm = GameObject.Instantiate(jogadorUm.gameObject) as GameObject;
+            jogadorUm = Instantiate(jogadorUm.gameObject) as GameObject;
             jogadorUm.transform.SetParent(canvas, false);
             jogadorUm.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 199, 0);
             jogadorUm.GetComponent<RectTransform>().Find("Pontos").GetComponent<Text>().text =

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Clock : MonoBehaviour
@@ -11,6 +8,7 @@ public class Clock : MonoBehaviour
     private float day;
     private const int DEGREES_PER_DAY = 360;
     private Transform clockHandTransform;
+    private bool stop = false;
     
     private void Awake()
     {
@@ -19,16 +17,18 @@ public class Clock : MonoBehaviour
 
     private void Update()
     {
-        day += Time.deltaTime / TOTAL_SECONDS;
-        float dayNormalized = day % 1f;
-        clockHandTransform.eulerAngles = new Vector3(0,0,-dayNormalized*DEGREES_PER_DAY);
-        
-        if(day>1)
+        if (day < 1)
+        {
+            day += Time.deltaTime / TOTAL_SECONDS;
+            float dayNormalized = day % 1f;
+            clockHandTransform.eulerAngles = new Vector3(0,0,-dayNormalized*DEGREES_PER_DAY);
+        }else if(!stop)
             timeOut();
     }
 
     private void timeOut()
     {
         eventSistem.GetComponent<BalanceamentoController>().sendResult();
+        stop = true;
     }
 }

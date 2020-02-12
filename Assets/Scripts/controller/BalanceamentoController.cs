@@ -1,21 +1,19 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BalanceamentoController : MonoBehaviour
 {
+    public GameObject WinScreen;
     private static List<GameObject> formules;
 
     private void Update()
     {
-        if (NucleoController.jogada)
+        if (NucleoController.jogada && !WinScreen.active)
         {
             NucleoController.jogadores[0].addTempo(Time.deltaTime);
         }
-        else
+        else if(!WinScreen.active)
         {
             NucleoController.jogadores[1].addTempo(Time.deltaTime);
         }
@@ -30,11 +28,6 @@ public class BalanceamentoController : MonoBehaviour
                 NucleoController.jogadores[0].addPontuacao(NucleoController.reward[0]);
             else
                 NucleoController.jogadores[1].addPontuacao(NucleoController.reward[0]);
-
-            if (!verifyOver())
-                SceneManager.LoadScene(5);
-            else
-                SceneManager.LoadScene(2);
         }
         else
         {
@@ -42,22 +35,9 @@ public class BalanceamentoController : MonoBehaviour
                 NucleoController.jogadores[0].addPontuacao(NucleoController.reward[1]);
             else
                 NucleoController.jogadores[1].addPontuacao(NucleoController.reward[1]);
-            
-            if (!verifyOver())
-                SceneManager.LoadScene(5);
-            else
-                SceneManager.LoadScene(2);
         }
-        
-        if(NucleoController.jogadores.Count>1)
-            NucleoController.jogada = !NucleoController.jogada;
-    }
 
-    private bool verifyOver()
-    {
-        if (NucleoController.rodada < 3)
-            return false;
-        return true;
+        WinScreen.SetActive(true);
     }
 
     private bool verifyResult()

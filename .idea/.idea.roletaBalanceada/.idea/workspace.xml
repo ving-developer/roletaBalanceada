@@ -2,43 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a87ee69a-7cc5-4483-9600-881b6d692229" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.roletaBalanceada/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.roletaBalanceada/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.roletaBalanceada/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.roletaBalanceada/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugin.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugin/Mono.Data.SqliteClient.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugin/Mono.Data.SqliteClient.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugin/backupDoBanco.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugin/backupDoBanco.sqlite3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugin/development.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugin/development.sqlite3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugin/sqlite3.def" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugin/sqlite3.def.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugin/sqlite3.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugin/sqlite3.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Equal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Equal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/JogadorDois.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/JogadorDois.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/JogadorUm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/JogadorUm.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Line.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Line.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Logo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Logo.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Roulette.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Roulette.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/confetti.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/confetti.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/confetti_sprites_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/confetti_sprites_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Tela de Balanceamento.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Tela de Balanceamento.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/btn_options_pressed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/btn_options_pressed.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/confetti_sprites.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/confetti_sprites.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Balanceamento.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Balanceamento.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Parabens.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Parabens.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Pontuacao.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Pontuacao.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Principal.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Principal.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Regras.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Regras.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sobre.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sobre.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sorteio.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sorteio.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/controller/BalanceamentoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/controller/BalanceamentoController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/controller/ParabensController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/controller/ParabensController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/controller/PontuacaoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/controller/PontuacaoController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/controller/PrincipalController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/controller/PrincipalController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/controller/RegrasController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/controller/RegrasController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/controller/SorteioMotor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/controller/SorteioMotor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/view/Clock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/view/Clock.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/view/Roulette.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/view/Roulette.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +39,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/NucleoController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/PrincipalController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/RegrasController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/Window_Confetti.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/Roulette.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/ConfettiSpritesAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/Formule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/WinScreen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/FormuleListAdapter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/Clock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/BalanceamentoController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -84,14 +65,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/view/FormuleListAdapter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/modelo/Jogador.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/NucleoController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/view/Clock.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/controller/SorteioMotor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/controller/BalanceamentoController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/ParabensController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/PontuacaoController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/PrincipalController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/RegrasController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/Roulette.cs" />
+        <option value="$PROJECT_DIR$/Assets/Confetti/Scripts/Window_Confetti.cs" />
+        <option value="$PROJECT_DIR$/Assets/Confetti/Scripts/ConfettiSpritesAnimator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/view/Window_Confetti.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/controller/SorteioMotor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/controller/BalanceamentoController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/view/Clock.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/view/ConfettiSpritesAnimator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/view/WinScreen.cs" />
       </list>
     </option>
   </component>
@@ -149,7 +135,11 @@
       <workItem from="1581173000304" duration="2219000" />
       <workItem from="1581205631259" duration="15033000" />
       <workItem from="1581289137969" duration="9624000" />
-      <workItem from="1581347995553" duration="2491000" />
+      <workItem from="1581347995553" duration="2503000" />
+      <workItem from="1581390960995" duration="2561000" />
+      <workItem from="1581395993201" duration="350000" />
+      <workItem from="1581430535896" duration="4674000" />
+      <workItem from="1581474152454" duration="1781000" />
     </task>
     <servers />
   </component>
