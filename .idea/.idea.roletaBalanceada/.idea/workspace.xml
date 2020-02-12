@@ -4,19 +4,9 @@
     <list default="true" id="a87ee69a-7cc5-4483-9600-881b6d692229" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.roletaBalanceada/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.roletaBalanceada/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.roletaBalanceada/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.roletaBalanceada/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/confetti.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/confetti.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/confetti_sprites_0.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/confetti_sprites_0.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Tela de Balanceamento.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Tela de Balanceamento.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/btn_options_pressed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/btn_options_pressed.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/confetti_sprites.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/confetti_sprites.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Confetti_1.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Confetti_1.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Confetti.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Confetti.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Balanceamento.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Balanceamento.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/controller/BalanceamentoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/controller/BalanceamentoController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/controller/SorteioMotor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/controller/SorteioMotor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/view/Clock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/view/Clock.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +31,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/RegrasController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/Window_Confetti.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/Roulette.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/BlastConfetti.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/ConfettiSpritesAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/Formule.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/WinScreen.cs" root0="FORCE_HIGHLIGHTING" />
@@ -78,6 +69,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/view/Clock.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/ConfettiSpritesAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/WinScreen.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/view/BlastConfetti.cs" />
       </list>
     </option>
   </component>
@@ -139,7 +131,7 @@
       <workItem from="1581390960995" duration="2561000" />
       <workItem from="1581395993201" duration="350000" />
       <workItem from="1581430535896" duration="4674000" />
-      <workItem from="1581474152454" duration="1781000" />
+      <workItem from="1581474152454" duration="7327000" />
     </task>
     <servers />
   </component>
