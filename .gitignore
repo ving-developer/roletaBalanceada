@@ -408,3 +408,9 @@ crashlytics-build.properties
 
 
 # End of https://www.gitignore.io/api/unity,csharp
+ProjectSettings/ProjectVersion.txt
+Assets/Plugins/sqlite3.dll.meta
+Assets/Plugins/sqlite3.dll
+Assets/Plugins/Editor.meta
+Assets/Plugin/sqlite3.dll.meta
+Assets/Plugin/sqlite3.dll
