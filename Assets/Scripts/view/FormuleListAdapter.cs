@@ -13,18 +13,17 @@ public class FormuleListAdapter : MonoBehaviour
     public RectTransform produtos;
     void Start()
     {
-        Equacao.todasEquacoes();
         updateItens(loadFormules());
         reagentes.Find("ViewPort/Content").GetComponent<RectTransform>().position = new Vector3(31.90425f,-259.0114f,0);
         produtos.Find("ViewPort/Content").GetComponent<RectTransform>().position = new Vector3(183.0772f,-259.0114f,0);
     }
     
     private Equacao loadFormules()
-    {return PrincipalController.enciclopediaEquacoes[Roulette.generateRandom(1,20)];}
+    {return NucleoController.enciclopediaEquacoes[Roulette.generateRandom(1,20)];}
     
     private void updateItens(Equacao equacao)
     {
-        BalanceamentoController.CurrentEquation = equacao;
+        NucleoController.currentEquation = equacao;
         Debug.Log("Reagentes:");
         foreach (var reagentes in equacao.Reagente)
         {

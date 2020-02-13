@@ -7,6 +7,6 @@ public class RegrasController : MonoBehaviour
 {
     public void principal()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(0);
     }
 }

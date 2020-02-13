@@ -5,32 +5,27 @@ namespace controller
 {
     public class PrincipalController : MonoBehaviour
     {
-        public static List<Jogador> jogadores;
-        public static bool jogada = false;
-        public static int idCor = -1;
-        public static Dictionary<int, Equacao> enciclopediaEquacoes;
         
         // Start is called before the first frame update
         void Start()
         {
-            jogadores = new List<Jogador>();
-            enciclopediaEquacoes = Equacao.todasEquacoes();
+            NucleoController.restartAll();
         }
         
         public void umJogador()
         {
-            Jogador jogadorUm = new Jogador(0,0);
-            jogadores.Add(jogadorUm);
+            Jogador jogadorUm = new Jogador(0,0,"Lomonosov");
+            NucleoController.jogadores.Add(jogadorUm);
             SceneManager.LoadScene(5);
         }
     
         public void doisJogadores()
         {
-            Jogador jogadorUm = new Jogador(0,0);
-            jogadores.Add(jogadorUm);
+            Jogador jogadorUm = new Jogador(0,0,"Lomonosov");
+            NucleoController.jogadores.Add(jogadorUm);
             
-            Jogador jogadorDois = new Jogador(0,0);
-            jogadores.Add(jogadorDois);
+            Jogador jogadorDois = new Jogador(0,0,"Lavoisier");
+            NucleoController.jogadores.Add(jogadorDois);
             
             SceneManager.LoadScene(5);
         }
@@ -40,14 +35,14 @@ namespace controller
             SceneManager.LoadScene(4);
         }
     
-        public void balanceamento()
+        public void configuracoes()
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(8);
         }
     
         public void pontuacao()
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
     
         public void sobre()

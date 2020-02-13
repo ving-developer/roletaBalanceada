@@ -9,10 +9,11 @@ public class Jogador{
 	private int pontuacao;
 	private float tempo;
 	
-	public Jogador(int pontuacao, int tempo)
+	public Jogador(int pontuacao, int tempo, String nome)
 	{
 		this.pontuacao = pontuacao;
 		this.tempo = tempo;
+		this.nome = nome;
 	}
 	
 	public String getTempo()

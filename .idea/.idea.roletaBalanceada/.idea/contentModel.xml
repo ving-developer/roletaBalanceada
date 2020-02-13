@@ -15,7 +15,11 @@
           </e>
           <e p="controller" t="Include">
             <e p="BalanceamentoController.cs" t="Include" />
+            <e p="ConfigController.cs" t="Include" />
+            <e p="NucleoController.cs" t="Include" />
+            <e p="ParabensController.cs" t="Include" />
             <e p="PontuacaoController.cs" t="Include" />
+            <e p="Preference.cs" t="Include" />
             <e p="PrincipalController.cs" t="Include" />
             <e p="RegrasController.cs" t="Include" />
             <e p="SorteioMotor.cs" t="Include" />
@@ -33,11 +37,18 @@
             <e p="Roleta.cs" t="Include" />
           </e>
           <e p="view" t="Include">
+            <e p="BlastConfetti.cs" t="Include" />
+            <e p="Clock.cs" t="Include" />
+            <e p="ConfettiSpritesAnimator.cs" t="Include" />
+            <e p="ConfigurationsList.cs" t="Include" />
             <e p="Formule.cs" t="Include" />
             <e p="FormuleListAdapter.cs" t="Include" />
+            <e p="ResultScreen.cs" t="Include" />
             <e p="Roulette.cs" t="Include" />
             <e p="RulesListAdapter.cs" t="Include" />
             <e p="ScoreListAdapter.cs" t="Include" />
+            <e p="Window_Confetti.cs" t="Include" />
+            <e p="WinScreen.cs" t="Include" />
           </e>
         </e>
       </e>

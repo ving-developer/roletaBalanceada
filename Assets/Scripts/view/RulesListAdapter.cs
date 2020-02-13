@@ -42,7 +42,7 @@ public class RulesListAdapter : MonoBehaviour
         view.descricao.text = model.descricao;
     }
     
-    public class RulesItemView
+    protected class RulesItemView
     {
         public Text titulo;
         public Text descricao;
@@ -54,7 +54,7 @@ public class RulesListAdapter : MonoBehaviour
         }
     }
     
-    public class RuleItemModel
+    protected class RuleItemModel
     {
         public String titulo;
         public String descricao;
