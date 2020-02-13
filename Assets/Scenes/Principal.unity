@@ -982,7 +982,7 @@ PrefabInstance:
     - target: {fileID: 1223309437819071755, guid: b7ab19cd0977c224283ddda09313e64e,
         type: 3}
       propertyPath: m_Name
-      value: MetodosDeBalanceamento
+      value: Configuracoes
       objectReference: {fileID: 0}
     - target: {fileID: 2725347240645965243, guid: b7ab19cd0977c224283ddda09313e64e,
         type: 3}
@@ -1092,7 +1092,7 @@ PrefabInstance:
     - target: {fileID: 6651058708535645431, guid: b7ab19cd0977c224283ddda09313e64e,
         type: 3}
       propertyPath: m_Text
-      value: "M\xE9todos de Balanceamento"
+      value: "Configura\xE7\xF5es"
       objectReference: {fileID: 0}
     - target: {fileID: 6651058708535645431, guid: b7ab19cd0977c224283ddda09313e64e,
         type: 3}
@@ -1127,7 +1127,7 @@ PrefabInstance:
     - target: {fileID: 9194202279778408590, guid: b7ab19cd0977c224283ddda09313e64e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: balanceamento
+      value: configuracoes
       objectReference: {fileID: 0}
     - target: {fileID: 9194202279778408590, guid: b7ab19cd0977c224283ddda09313e64e,
         type: 3}
@@ -1655,7 +1655,7 @@ PrefabInstance:
     - target: {fileID: 5865374626325369258, guid: b68f5a713654d0e4fb21e8a513ddac26,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -304.1
+      value: -304.09998
       objectReference: {fileID: 0}
     - target: {fileID: 5865374626325369258, guid: b68f5a713654d0e4fb21e8a513ddac26,
         type: 3}

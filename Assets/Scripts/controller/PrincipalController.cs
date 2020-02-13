@@ -35,9 +35,9 @@ namespace controller
             SceneManager.LoadScene(4);
         }
     
-        public void balanceamento()
+        public void configuracoes()
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(8);
         }
     
         public void pontuacao()

@@ -10,7 +10,7 @@ public class Window_Confetti : MonoBehaviour {
 
     private List<Confetti> confettiList;
     private float spawnTimer;
-    private const float SPAWN_TIMER_MAX = 0.1f;
+    private const float SPAWN_TIMER_MAX = 0.3f;
 
     private void Awake() {
         confettiList = new List<Confetti>();
@@ -57,6 +57,7 @@ public class Window_Confetti : MonoBehaviour {
             this.anchoredPosition = anchoredPosition;
             this.minimumY = minimumY;
             transform = Instantiate(prefab, container);
+            transform.GetComponent<RectTransform>().localScale = new Vector3(4.5f,4.5f,0);
             rectTransform = transform.GetComponent<RectTransform>();
             rectTransform.anchoredPosition = anchoredPosition;
 

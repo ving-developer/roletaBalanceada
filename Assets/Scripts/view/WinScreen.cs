@@ -1,40 +1,39 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class WinScreen : MonoBehaviour
 {
-    public RectTransform screen;
     public GameObject playerUm;
     public GameObject playerDois;
-    private GameObject currentPlayer;
-    private int current;
-    private Text scoreText;
-    private Text timeText;
+    public RectTransform recipiente;
     
     // Start is called before the first frame update
     void Start()
     {
-        if (NucleoController.jogada)//invertido pq 
+        Jogador jogador;
+        GameObject player;
+        
+        if (int.Parse(NucleoController.jogadores[0].getPontuacao()) >
+            int.Parse(NucleoController.jogadores[1].getPontuacao()))
         {
-            currentPlayer = playerUm;
-            current = 0;
+            player = playerUm;
+            jogador = NucleoController.jogadores[0];
         }
         else
         {
-            currentPlayer = playerDois;
-            current = 1;
+            player = playerDois;
+            jogador = NucleoController.jogadores[1];
         }
         
-        currentPlayer = Instantiate(currentPlayer.gameObject) as GameObject;
-        currentPlayer.transform.SetParent(screen,false);
-        currentPlayer.GetComponent<RectTransform>().anchoredPosition = new Vector3(0,684,0);
-        
-        scoreText = currentPlayer.GetComponent<RectTransform>().Find("Pontos").GetComponent<Text>();
-        scoreText.text = NucleoController.jogadores[current].getPontuacao();
-        
-        timeText = currentPlayer.GetComponent<RectTransform>().Find("Tempo").GetComponent<Text>();
-        timeText.text = NucleoController.jogadores[current].getTempo();
+        player = Instantiate(player.gameObject) as GameObject;
+        player.transform.SetParent(recipiente, false);
+        player.GetComponent<RectTransform>().localScale = new Vector3(1.5f,1.5f,0);
+        player.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 100, 0);
+        player.GetComponent<RectTransform>().Find("Pontos").GetComponent<Text>().text = jogador.getPontuacao();
+        player.GetComponent<RectTransform>().Find("Tempo").GetComponent<Text>().text = jogador.getTempo();
     }
 
     // Update is called once per frame
@@ -42,24 +41,9 @@ public class WinScreen : MonoBehaviour
     {
         
     }
-    
-    
+
     public void continuar()
     {
-        if (!verifyOver())
-        {
-            if(NucleoController.jogadores.Count>1)
-                NucleoController.jogada = !NucleoController.jogada;
-            SceneManager.LoadScene(5);
-        }
-        else
-            SceneManager.LoadScene(2);
-    }
-    
-    private bool verifyOver()
-    {
-        if (NucleoController.rodada < 3)
-            return false;
-        return true;
+        SceneManager.LoadScene(2);
     }
 }

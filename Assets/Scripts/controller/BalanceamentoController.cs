@@ -4,16 +4,16 @@ using UnityEngine.UI;
 
 public class BalanceamentoController : MonoBehaviour
 {
-    public GameObject WinScreen;
+    public GameObject ResultScreen;
     private static List<GameObject> formules;
 
     private void Update()
     {
-        if (NucleoController.jogada && !WinScreen.active)
+        if (NucleoController.jogada && !ResultScreen.active)
         {
             NucleoController.jogadores[0].addTempo(Time.deltaTime);
         }
-        else if(!WinScreen.active)
+        else if(!ResultScreen.active)
         {
             NucleoController.jogadores[1].addTempo(Time.deltaTime);
         }
@@ -37,7 +37,7 @@ public class BalanceamentoController : MonoBehaviour
                 NucleoController.jogadores[1].addPontuacao(NucleoController.reward[1]);
         }
 
-        WinScreen.SetActive(true);
+        ResultScreen.SetActive(true);
     }
 
     private bool verifyResult()

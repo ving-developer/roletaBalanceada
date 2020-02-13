@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sobre.unity
     guid: ea7ac25ee959151499a29fb5bcacd2fc
+  - enabled: 1
+    path: Assets/Scenes/Vencedor.unity
+    guid: c1685ecca05a46445b78d63d19ba8056
+  - enabled: 1
+    path: Assets/Scenes/Configuracoes.unity
+    guid: 6aafa7d75a28b4542ac342f519d9a061
   m_configObjects: {}
