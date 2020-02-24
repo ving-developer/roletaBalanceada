@@ -16,7 +16,7 @@ public class ConfigController : MonoBehaviour
 
     private void OnDestroy()
     {
-        NucleoController.savePreferences();
+        NucleoController.instance().savePreferences();
     }
 
     public void principal()

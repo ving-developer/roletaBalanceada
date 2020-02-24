@@ -15,7 +15,7 @@ public class ResultScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (NucleoController.jogada)//invertido pq 
+        if (NucleoController.instance().jogada)//invertido pq 
         {
             currentPlayer = playerUm;
             current = 0;
@@ -34,10 +34,10 @@ public class ResultScreen : MonoBehaviour
         currentPlayer.GetComponent<RectTransform>().localScale = new Vector3(1.5f,1.5f,0);
         
         scoreText = currentPlayer.GetComponent<RectTransform>().Find("Pontos").GetComponent<Text>();
-        scoreText.text = NucleoController.jogadores[current].getPontuacao();
+        scoreText.text = NucleoController.instance().jogadores[current].getPontuacao();
         
         timeText = currentPlayer.GetComponent<RectTransform>().Find("Tempo").GetComponent<Text>();
-        timeText.text = NucleoController.jogadores[current].getTempo();
+        timeText.text = NucleoController.instance().jogadores[current].getTempo();
     }
 
     // Update is called once per frame
@@ -47,15 +47,15 @@ public class ResultScreen : MonoBehaviour
     }
     
     
-    public void continuar()
-    {
+    public void continuar(){
+        NucleoController nucleo = NucleoController.instance();
         if (!verifyOver())
         {
-            if(NucleoController.jogadores.Count>1)
-                NucleoController.jogada = !NucleoController.jogada;
+            if(nucleo.jogadores.Count>1)
+                nucleo.jogada = !nucleo.jogada;
             SceneManager.LoadScene(5);
         }
-        else if (NucleoController.jogadores.Count > 1)
+        else if (nucleo.jogadores.Count > 1)
             SceneManager.LoadScene(7);
         else
             SceneManager.LoadScene(2);
@@ -63,7 +63,7 @@ public class ResultScreen : MonoBehaviour
     
     private bool verifyOver()
     {
-        if (NucleoController.rodada <= NucleoController.preferences["TurnoConfiguracao"].getInt())
+        if (NucleoController.instance().rodada <= NucleoController.preferences["TurnoConfiguracao"].getInt())
             return false;
         return true;
     }

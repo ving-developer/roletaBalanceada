@@ -13,19 +13,20 @@ public class WinScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        NucleoController nucleo = NucleoController.instance();
         Jogador jogador;
         GameObject player;
         
-        if (int.Parse(NucleoController.jogadores[0].getPontuacao()) >
-            int.Parse(NucleoController.jogadores[1].getPontuacao()))
+        if (int.Parse(nucleo.jogadores[0].getPontuacao()) >
+            int.Parse(nucleo.jogadores[1].getPontuacao()))
         {
             player = playerUm;
-            jogador = NucleoController.jogadores[0];
+            jogador = nucleo.jogadores[0];
         }
         else
         {
             player = playerDois;
-            jogador = NucleoController.jogadores[1];
+            jogador = nucleo.jogadores[1];
         }
         
         player = Instantiate(player.gameObject) as GameObject;

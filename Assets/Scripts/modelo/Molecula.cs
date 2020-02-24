@@ -66,5 +66,22 @@ public class Molecula
         return nomeMolecula;
     }
 
+
+
+    public List<AtomoQuantificado> quantidadeAtomos(int balanco) {
+        List<AtomoQuantificado> atomosQuantificados = new List<AtomoQuantificado>();
+        foreach (AtomoQuantificado aq in AtomosQuantificados){
+            AtomoQuantificado atomoQuantificado = new AtomoQuantificado();
+            atomoQuantificado.Atomo = aq.Atomo;
+            atomoQuantificado.Quantidade = aq.Quantidade * balanco;
+            atomosQuantificados.Add(atomoQuantificado);
+        }
+
+        foreach(MoleculaCompoe moleculaComp in MoleculasCompoePrimaria){
+            atomosQuantificados.InsertRange(atomosQuantificados.Count, moleculaComp.Secundaria.quantidadeAtomos(balanco));
+        }
+
+        return atomosQuantificados;
+    }
 }
 

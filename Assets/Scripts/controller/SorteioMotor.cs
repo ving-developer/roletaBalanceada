@@ -14,45 +14,33 @@ public class SorteioMotor : MonoBehaviour
     public Text rodada;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        rodada.text = NucleoController.rodada.ToString();
+    void Start(){
+        NucleoController nucleo = NucleoController.instance();
+        rodada.text = nucleo.rodada.ToString();
 
-        if (NucleoController.jogadores.Count==1)
-        {
+        if (nucleo.jogadores.Count==1){
             jogadorUm = Instantiate(jogadorUm.gameObject) as GameObject;
             jogadorUm.transform.SetParent(canvas, false);
             jogadorUm.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 199, 0);
-            jogadorUm.GetComponent<RectTransform>().Find("Pontos").GetComponent<Text>().text =
-                NucleoController.jogadores[0].getPontuacao();
-            jogadorUm.GetComponent<RectTransform>().Find("Tempo").GetComponent<Text>().text =
-                NucleoController.jogadores[0].addTempo(Time.deltaTime);
-        }
-        else
-        {
+            jogadorUm.GetComponent<RectTransform>().Find("Pontos").GetComponent<Text>().text = nucleo.jogadores[0].getPontuacao();
+            jogadorUm.GetComponent<RectTransform>().Find("Tempo").GetComponent<Text>().text = nucleo.jogadores[0].addTempo(Time.deltaTime);
+        }else{
             jogadorUm = GameObject.Instantiate(jogadorUm.gameObject) as GameObject;
             jogadorUm.transform.SetParent(canvas, false);
-            jogadorUm.GetComponent<RectTransform>().Find("Pontos").GetComponent<Text>().text =
-                NucleoController.jogadores[0].getPontuacao();
-            jogadorUm.GetComponent<RectTransform>().Find("Tempo").GetComponent<Text>().text =
-                NucleoController.jogadores[0].addTempo(Time.deltaTime);
+            jogadorUm.GetComponent<RectTransform>().Find("Pontos").GetComponent<Text>().text = nucleo.jogadores[0].getPontuacao();
+            jogadorUm.GetComponent<RectTransform>().Find("Tempo").GetComponent<Text>().text = nucleo.jogadores[0].addTempo(Time.deltaTime);
 
             jogadorDois = GameObject.Instantiate(this.jogadorDois.gameObject) as GameObject;
             jogadorDois.transform.SetParent(canvas, false);
-            jogadorDois.GetComponent<RectTransform>().Find("Pontos").GetComponent<Text>().text =
-                NucleoController.jogadores[1].getPontuacao();
-            jogadorDois.GetComponent<RectTransform>().Find("Tempo").GetComponent<Text>().text =
-                NucleoController.jogadores[1].addTempo(Time.deltaTime);
+            jogadorDois.GetComponent<RectTransform>().Find("Pontos").GetComponent<Text>().text = nucleo.jogadores[1].getPontuacao();
+            jogadorDois.GetComponent<RectTransform>().Find("Tempo").GetComponent<Text>().text = nucleo.jogadores[1].addTempo(Time.deltaTime);
         }
         
-        if(NucleoController.jogadores.Count == 1)
+        if(nucleo.jogadores.Count == 1) { 
             playerSelector.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 202, -1005.874f);
-        else if (NucleoController.jogada)
-        {
+        } else if (nucleo.jogada){
             playerSelector.GetComponent<RectTransform>().anchoredPosition = new Vector3(-215, 202, -1005.874f);
-        }
-        else
-        {
+        }else{
             playerSelector.GetComponent<RectTransform>().anchoredPosition = new Vector3(197, 202, -1005.874f);
         }
     }

@@ -14,68 +14,58 @@ public class Roulette : MonoBehaviour
     public static bool isRotate;
     private int speed;
     private int trueSpeed;
+
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start(){
         speed = 0;
         trueSpeed = speed;
         isRotate = false;
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         if(isRotate)
             Rotate();
     }
 
-    public void sortRoulette()
-    {
-        if(!isRotate)
-        {
+    public void sortRoulette(){
+        if(!isRotate){
             isRotate = true;
-            speed = 11 * generateRandom(10, 40);
+            speed = 11 * new System.Random().Next(10, 40);
         }
     }
 
-    private void Rotate()
-    {
+    private void Rotate(){
         roulette.GetComponent<Transform>().Rotate(0,0,trueSpeed*Time.deltaTime);
+
         if(speed>0){
-            if(speed<34)
+
+            if (speed < 34){
                 moveSpinner(1);
-            else if(speed<110)
+            } else if (speed < 110){
                 moveSpinner(2);
-            else
+            } else{
                 moveSpinner(3);
-            
-            if (speed % 11 == 0)
-            {
+            }
+
+            if (speed % 11 == 0){
                 trueSpeed = speed;
             }
-        }
-        else if(verifyStop())
-        {
+
+        }else if(verifyStop()){
             moveSpinner(0);
             isRotate = false;
             trueSpeed = 0;
-            verifyResult();
+            NucleoController nucleo = NucleoController.instance();
+            nucleo.executarAcao(verifyResult());
             return;
-        }
-        else
-        {
+        }else{
             speed = 11;
         }
 
         speed --;
     }
 
-    public static int generateRandom(int min, int max)
-    {
-        Random random = new Random();
-
-        return random.Next(min, max);
-    }
     /*
      * Verifica os pontos criticos em que a roleta nao pode parar
      */
@@ -103,72 +93,52 @@ public class Roulette : MonoBehaviour
         return true;
     }
 
-    private void verifyResult()
+    private int verifyResult()
     {
         float angle = roulette.GetComponent<Transform>().localEulerAngles.z;
 
-        if (angle <= 45)//vermelho de baixo
-        {
-            NucleoController.idCor = 1;
+        if (angle <= 45){//vermelho de baixo
             SceneManager.LoadScene(1);
-            NucleoController.reward[0] = 40;
-            NucleoController.reward[1] = 0;
-            return;
-        }
-        if (angle <= 90)//amarelo de baixo
-        {
-            NucleoController.idCor = 2;
+            //NucleoController.reward[0] = 40;
+            //NucleoController.reward[1] = 0;
+            return 1;
+        }else if (angle <= 90){//amarelo de baixo
             SceneManager.LoadScene(1);
-            NucleoController.reward[0] = 30;
-            NucleoController.reward[1] = 0;
-            return;
-        }
-        if (angle<=135)//azul de cima
-        {
-            NucleoController.idCor = 3;
+            //NucleoController.reward[0] = 30;
+            //NucleoController.reward[1] = 0;
+            return 2;
+        }if (angle<=135) { //azul de cima
             SceneManager.LoadScene(1);
-            NucleoController.reward[0] = 30;
-            NucleoController.reward[1] = -10;
-            return;
-        }
-        if (angle<=180)//verde de cima
-        {
-            NucleoController.idCor = 4;
+            //NucleoController.reward[0] = 30;
+            //NucleoController.reward[1] = -10;
+            return 3;
+        }if (angle<=180){ //verde de cima
             SceneManager.LoadScene(1);
-            NucleoController.reward[0] = 20;
-            NucleoController.reward[1] = -10;
-            return;
-        }
-        if (angle<=225)//vermelho de cima
-        {
-            NucleoController.idCor = 5;
+            //NucleoController.reward[0] = 20;
+            //NucleoController.reward[1] = -10;
+            return 4;
+        }if (angle<=225){//vermelho de cima
             SceneManager.LoadScene(1);
-            NucleoController.reward[0] = 50;
-            NucleoController.reward[1] = -10;
-            return;
-        }
-        if (angle<=270)//amarelo de cima
-        {
-            NucleoController.idCor = 6;
+            //NucleoController.reward[0] = 50;
+            //NucleoController.reward[1] = -10;
+            return 5;
+        }if (angle <= 270){ //amarelo de cima
             SceneManager.LoadScene(1);
-            NucleoController.reward[0] = 40;
-            NucleoController.reward[1] = -10;
-            return;
-        }
-        if (angle<=315)//azul de baixo
-        {
-            NucleoController.idCor = 7;
+            //NucleoController.reward[0] = 40;
+            //NucleoController.reward[1] = -10;
+            return 6;
+        } else if (angle <= 315){ //azul de baixo
             SceneManager.LoadScene(1);
-            NucleoController.reward[0] = 20;
-            NucleoController.reward[1] = 0;
-            return;
+            //NucleoController.reward[0] = 20;
+            //NucleoController.reward[1] = 0;
+            return 7;
+        } else{
+            //verde de baixo
+            SceneManager.LoadScene(1);
+            //NucleoController.reward[0] = 10;
+            //NucleoController.reward[1] = -10;
+            return 8;
         }
-        
-        //verde de baixo
-        NucleoController.idCor = 8;
-        SceneManager.LoadScene(1);
-        NucleoController.reward[0] = 10;
-        NucleoController.reward[1] = -10;
     }
 
     private void moveSpinner(int velocity)

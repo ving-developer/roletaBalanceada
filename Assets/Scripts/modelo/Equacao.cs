@@ -23,12 +23,15 @@ public class Equacao{
 
     private static Dictionary<int, Equacao> equacoes;
 
+    private bool utilizada = false;
+
     public string Tipo { get => tipo; set => tipo = value; }
     public Time TempoMedioResposta { get => tempoMedioResposta; set => tempoMedioResposta = value; }
     public Time MelhorTempoResposta { get => melhorTempoResposta; set => melhorTempoResposta = value; }
     public int Id { get => id; set => id = value; }
     public List<MoleculaForma> Reagente { get => reagente; set => reagente = value; }
     public List<MoleculaForma> Produto { get => produto; set => produto = value; }
+    public bool Utilizada { get => utilizada; set => utilizada = value; }
 
     public static Dictionary<int, Equacao> todasEquacoes() {
 
@@ -50,13 +53,10 @@ public class Equacao{
             }
 
         }
-
-        
-
-
-
         return equacoes;
     }
+
+
 
     override
     public string ToString() {
@@ -84,5 +84,37 @@ public class Equacao{
         return $"{equacaoReagente} = {equacaoProduto}";
     }
 
-}
+    public Dictionary<int, AtomoQuantificado>.ValueCollection quantidadeAtomosReagente() {
+        return quantidadeAtomos(reagente);
+    }
+
+    public Dictionary<int, AtomoQuantificado>.ValueCollection quantidadeAtomosProduto() {
+        return quantidadeAtomos(produto);
+    }
+
+
+    private Dictionary<int, AtomoQuantificado>.ValueCollection quantidadeAtomos(List<MoleculaForma> moleculaFormas ) {
+        List<AtomoQuantificado> atomosQuantificados = new List<AtomoQuantificado>();
+
+        Dictionary<int, AtomoQuantificado> atomos = new Dictionary<int, AtomoQuantificado>();
+
+        foreach (MoleculaForma mf in moleculaFormas){
+
+            List<AtomoQuantificado> atomosAux = mf.quantidadeAtomos();
+
+            foreach (AtomoQuantificado at in atomosAux){
+                if (!atomos.ContainsKey(at.Atomo.Id)){
+                    atomos[at.Atomo.Id] = at;
+                } else{
+                    atomos[at.Atomo.Id].Quantidade += at.Quantidade;
+                }
+
+            }
+        }
+
+
+        return atomos.Values;
+    }
+
+    }
 

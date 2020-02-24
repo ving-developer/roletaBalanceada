@@ -9,23 +9,23 @@ namespace controller
         // Start is called before the first frame update
         void Start()
         {
-            NucleoController.restartAll();
+            NucleoController.instance().restartAll();
         }
         
         public void umJogador()
         {
             Jogador jogadorUm = new Jogador(0,0,"Lomonosov");
-            NucleoController.jogadores.Add(jogadorUm);
+            NucleoController.instance().jogadores.Add(jogadorUm);
             SceneManager.LoadScene(5);
         }
     
         public void doisJogadores()
         {
             Jogador jogadorUm = new Jogador(0,0,"Lomonosov");
-            NucleoController.jogadores.Add(jogadorUm);
+            NucleoController.instance().jogadores.Add(jogadorUm);
             
             Jogador jogadorDois = new Jogador(0,0,"Lavoisier");
-            NucleoController.jogadores.Add(jogadorDois);
+            NucleoController.instance().jogadores.Add(jogadorDois);
             
             SceneManager.LoadScene(5);
         }

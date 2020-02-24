@@ -16,9 +16,8 @@ public class Roleta
 	private Jogador jogador;
 
 	/// Roda a roleta e verifica em qual equação parou
-	public Equacao rodarRoleta()
-	{
-		return null;
+	public Equacao rodarRoleta(string tipoEquacao) {
+        return null;
 	}
 
 	/// Seleciona 10 equações de cada tema

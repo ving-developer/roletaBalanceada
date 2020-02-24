@@ -21,15 +21,15 @@ public class ParabensController : MonoBehaviour
 
     private void adjustTitle()
     {
-        title.text = title.text + "\n"+NucleoController.jogadores[0].getNome();
+        title.text = title.text + "\n"+NucleoController.instance().jogadores[0].getNome();
     }
 
     private void adjustSufix()
     {
-        if (int.Parse(NucleoController.jogadores[0].getPontuacao()) < 20)
+        if (int.Parse(NucleoController.instance().jogadores[0].getPontuacao()) < 20)
         {
             sufix.text = "Muito fraco, você precisa de aulas com o Diego.";
-        }else if (int.Parse(NucleoController.jogadores[0].getPontuacao()) < 50)
+        }else if (int.Parse(NucleoController.instance().jogadores[0].getPontuacao()) < 50)
         {
             sufix.text = "Está pegando o jeito!";
         }
@@ -54,7 +54,7 @@ public class ParabensController : MonoBehaviour
     {
         try
         {
-            List<Jogador> jogadores = NucleoController.jogadores;
+            List<Jogador> jogadores = NucleoController.instance().jogadores;
             
             verifyName();
             

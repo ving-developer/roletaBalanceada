@@ -7,34 +7,33 @@ public class BalanceamentoController : MonoBehaviour
     public GameObject ResultScreen;
     private static List<GameObject> formules;
 
-    private void Update()
-    {
-        if (NucleoController.jogada && !ResultScreen.active)
-        {
-            NucleoController.jogadores[0].addTempo(Time.deltaTime);
-        }
-        else if(!ResultScreen.active)
-        {
-            NucleoController.jogadores[1].addTempo(Time.deltaTime);
+    private void Update(){
+        NucleoController nucleo = NucleoController.instance();
+        if (nucleo.jogada && !ResultScreen.active){
+            nucleo.jogadores[0].addTempo(Time.deltaTime);
+        }else if(!ResultScreen.active){
+            nucleo.jogadores[1].addTempo(Time.deltaTime);
         }
     }
 
     public void sendResult()
     {
-        NucleoController.rodada++;
-        if (verifyResult())
-        {
-            if(NucleoController.jogada)
-                NucleoController.jogadores[0].addPontuacao(NucleoController.reward[0]);
-            else
-                NucleoController.jogadores[1].addPontuacao(NucleoController.reward[0]);
+        NucleoController nucleo = NucleoController.instance();
+        nucleo.rodada++;
+        if (verifyResult()){
+            if (nucleo.jogada){
+                nucleo.jogadores[0].addPontuacao(nucleo.reward[0]);
+            } else{
+                nucleo.jogadores[1].addPontuacao(nucleo.reward[0]);
+            }
+                
         }
         else
         {
-            if(NucleoController.jogada)
-                NucleoController.jogadores[0].addPontuacao(NucleoController.reward[1]);
+            if(nucleo.jogada)
+                nucleo.jogadores[0].addPontuacao(nucleo.reward[1]);
             else
-                NucleoController.jogadores[1].addPontuacao(NucleoController.reward[1]);
+                nucleo.jogadores[1].addPontuacao(nucleo.reward[1]);
         }
 
         ResultScreen.SetActive(true);
@@ -42,7 +41,8 @@ public class BalanceamentoController : MonoBehaviour
 
     private bool verifyResult()
     {
-        List<MoleculaForma> reagentes = NucleoController.currentEquation.Reagente;
+        NucleoController nucleo = NucleoController.instance();
+        List<MoleculaForma> reagentes = nucleo.currentEquation.Reagente;
         int i = 0;
         for (; i < reagentes.Count; i++)
         {
@@ -54,7 +54,7 @@ public class BalanceamentoController : MonoBehaviour
             }
         }
         
-        List<MoleculaForma> produtos = NucleoController.currentEquation.Produto;
+        List<MoleculaForma> produtos = nucleo.currentEquation.Produto;
         for (int j = 0; j < produtos.Count; j++)
         {
             if (produtos[j].Balanco !=

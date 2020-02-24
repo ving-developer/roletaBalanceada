@@ -44,10 +44,11 @@ public class MoleculaForma
             }
             Conexoes.fecharConexao();
 
-       
-
     }
 
+    public List<AtomoQuantificado> quantidadeAtomos() {
+        return molecula.quantidadeAtomos(balanco);
+    }
 
 }
 
