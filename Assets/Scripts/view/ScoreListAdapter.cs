@@ -16,30 +16,17 @@ public class ScoreListAdapter : MonoBehaviour
         updateItens(loadScores());
     }
 
-    private ScoreItemModel[] loadScores()
+    private List<ScoreItemModel> loadScores()
     {
-        ScoreItemModel[] models = new ScoreItemModel[15];
-        
-        models[0] = new ScoreItemModel("Henrique Barros",99999);
-        models[1] = new ScoreItemModel("Luiz Loja",99998);
-        models[2] = new ScoreItemModel("Diego Rodrigues",99997);
-        models[3] = new ScoreItemModel("Moça do TCC",99996);
-        models[4] = new ScoreItemModel("Jogador",99995);
-        models[5] = new ScoreItemModel("Henrique Barros",99999);
-        models[6] = new ScoreItemModel("Luiz Loja",99998);
-        models[7] = new ScoreItemModel("Diego Rodrigues",99997);
-        models[8] = new ScoreItemModel("Moça do TCC",99996);
-        models[9] = new ScoreItemModel("Jogador",99995);
-        models[10] = new ScoreItemModel("Henrique Barros",99999);
-        models[11] = new ScoreItemModel("Luiz Loja",99998);
-        models[12] = new ScoreItemModel("Diego Rodrigues",99997);
-        models[13] = new ScoreItemModel("Moça do TCC",99996);
-        models[14] = new ScoreItemModel("Jogador",99995);
-
+        List<ScoreItemModel> models = new List<ScoreItemModel>();
+        List<Jogador> jogadores = Jogador.pegarTodosJogador();
+        foreach (Jogador j in jogadores){
+            models.Add(new ScoreItemModel(j.Nome,j.Pontuacao));
+        }
         return models;
     }
 
-    private void updateItens(ScoreItemModel[] models)
+    private void updateItens(List<ScoreItemModel> models)
     {
         foreach (Transform child in content)
             Destroy(child.gameObject);

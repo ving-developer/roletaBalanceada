@@ -21,6 +21,19 @@ public class Conexoes {
 
     }
 
+    public static void executarDML(string query) {
+
+        _connection = new SqliteConnection(urlDataBase);
+        _connection.Open();
+
+        IDbCommand _command = _connection.CreateCommand();
+
+        _command.CommandText = query;
+
+        _command.ExecuteNonQuery();
+    }
+
+
     public static void fecharConexao() {
         _connection.Close();
     }

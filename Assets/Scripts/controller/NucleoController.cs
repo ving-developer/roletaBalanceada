@@ -95,6 +95,13 @@ public class NucleoController
         preferences.Add("TurnoConfiguracao",new Preference(2));
     }
 
+    public void salvarJogador(string name) {
+        Jogador jogador = jogadores[0];
+        jogador.Nome = name;
+        jogador.salvar();
+    }
+
+
     public void savePreferences(){
         //aqui deve ser chamado um metodo que salva na memoria os atuais dados salvos no dictionary preferences
     }

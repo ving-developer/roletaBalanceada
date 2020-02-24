@@ -12,29 +12,22 @@ public class ParabensController : MonoBehaviour
     public Text title;
     
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start(){
         TouchScreenKeyboard.Open("", TouchScreenKeyboardType.NamePhonePad, false, false, true);
         adjustSufix();
         adjustTitle();
     }
 
-    private void adjustTitle()
-    {
-        title.text = title.text + "\n"+NucleoController.instance().jogadores[0].getNome();
+    private void adjustTitle(){
+        title.text = title.text + "\n"+NucleoController.instance().jogadores[0].Nome;
     }
 
-    private void adjustSufix()
-    {
-        if (int.Parse(NucleoController.instance().jogadores[0].getPontuacao()) < 20)
-        {
+    private void adjustSufix(){
+        if (int.Parse(NucleoController.instance().jogadores[0].getPontuacao()) < 20){
             sufix.text = "Muito fraco, você precisa de aulas com o Diego.";
-        }else if (int.Parse(NucleoController.instance().jogadores[0].getPontuacao()) < 50)
-        {
+        }else if (int.Parse(NucleoController.instance().jogadores[0].getPontuacao()) < 50){
             sufix.text = "Está pegando o jeito!";
-        }
-        else
-        {
+        }else{
             sufix.text = "Você arrasou!";
         }
     }
@@ -44,8 +37,7 @@ public class ParabensController : MonoBehaviour
         String text = inputText.text;
         int difference = text.Length - 19;
         
-        if (difference>0)
-        {
+        if (difference>0){
             inputText.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,334.2f+14.79f*difference);
         }
     }
@@ -75,8 +67,8 @@ public class ParabensController : MonoBehaviour
         }
     }
 
-    private void saveAndContinue()
-    {
+    private void saveAndContinue(){
+        NucleoController.instance().salvarJogador(inputText.text);
         SceneManager.LoadScene(3);
     }
     
@@ -87,9 +79,7 @@ public class ParabensController : MonoBehaviour
         if (name.Length < 1)
         {
             throw new System.ArgumentException("Nome não pode ficar em branco!");
-        }
-        else
-        {
+        }else{
             Debug.Log(name);
         }
     }
