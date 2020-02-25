@@ -2,11 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Formule : MonoBehaviour
 {
     public Text formuleQuanity;
+    public Text formuleName;
+    private int tipo;//0 para produto 1 para reagente
     
     // Start is called before the first frame update
     void Start()
@@ -22,18 +25,31 @@ public class Formule : MonoBehaviour
 
     public void more()
     {
-        if(int.Parse(formuleQuanity.text.ToString())<99)
-            formuleQuanity.text = (int.Parse(formuleQuanity.text.ToString())+1).ToString();
+        int value = int.Parse(formuleQuanity.text);
+        if(value<99)
+        {
+            formuleQuanity.text = (value += 1).ToString();
+            MoleculeQuanityAdapter.atualizarBalanco(formuleName.text,tipo,value);
+        }
     }
 
     public void less()
     {
-        if(int.Parse(formuleQuanity.text.ToString())>0)
-            formuleQuanity.text = (int.Parse(formuleQuanity.text.ToString())-1).ToString();
+        int value = int.Parse(formuleQuanity.text);
+        if(value>0)
+        {
+            formuleQuanity.text = (value -= 1).ToString();
+            MoleculeQuanityAdapter.atualizarBalanco(formuleName.text,tipo,value);
+        }
     }
 
     public int getQuanity()
     {
         return int.Parse(formuleQuanity.text);
+    }
+
+    public void setTipo(int value)
+    {
+        tipo = value;
     }
 }

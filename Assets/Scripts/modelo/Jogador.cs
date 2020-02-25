@@ -10,12 +10,12 @@ public class Jogador{
     private int id;
 	private string nome;
 	private int pontuacao;
-	private int tempo;
+	private float tempo;
 
     public string Nome { get => nome; set => nome = value; }
     public int Pontuacao { get => pontuacao; set => pontuacao = value; }
     public int Id { get => id; set => id = value; }
-    public int Tempo { get => tempo; set => tempo = value; }
+    public float Tempo { get => tempo; set => tempo = value; }
 
     public Jogador(int pontuacao, int tempo, String nome)
 	{
@@ -23,8 +23,9 @@ public class Jogador{
 		this.Tempo = tempo;
 		this.Nome = nome;
 	}
+    
     public Jogador() {
-
+	    
     }
 	
 	public String getTempo()
@@ -37,7 +38,7 @@ public class Jogador{
 	
 	public String addTempo(float segundos)
 	{
-		tempo += (int) segundos;
+		tempo += segundos;
 		return getTempo();
 	}
 

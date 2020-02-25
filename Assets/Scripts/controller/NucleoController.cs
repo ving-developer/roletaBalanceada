@@ -12,7 +12,7 @@ public class NucleoController
     private NucleoController() {
         currentEquation = ControladorEquacoes.instance().pegarEquacao("Facil");
         Dictionary<int, AtomoQuantificado>.ValueCollection atomos =  currentEquation.quantidadeAtomosReagente();
-        Debug.Log(currentEquation.ToString());
+        
         foreach(AtomoQuantificado at in atomos){
             Debug.Log($"{at.Atomo.Sigla}:{at.Quantidade}");
         }
@@ -76,7 +76,7 @@ public class NucleoController
         }
     }
 
-            public void restartAll(){
+    public void restartAll(){
         ControladorEquacoes controladorEquacoes = ControladorEquacoes.instance();
 
         if(preferences.Count==0)//podera ser removido quando adicionado um select no banco de dados pra preferencias

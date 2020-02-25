@@ -18,25 +18,28 @@ public class BalanceamentoController : MonoBehaviour
 
     public void sendResult()
     {
+        int index;
         NucleoController nucleo = NucleoController.instance();
         nucleo.rodada++;
-        if (verifyResult()){
-            if (nucleo.jogada){
-                nucleo.jogadores[0].addPontuacao(nucleo.reward[0]);
-            } else{
-                nucleo.jogadores[1].addPontuacao(nucleo.reward[0]);
-            }
-                
+        
+        ResultScreen.SetActive(true);
+        
+        if (verifyResult())
+        {
+            index = 0;
+            ResultScreen.GetComponent<ResultScreen>().showBlast();
         }
         else
         {
-            if(nucleo.jogada)
-                nucleo.jogadores[0].addPontuacao(nucleo.reward[1]);
-            else
-                nucleo.jogadores[1].addPontuacao(nucleo.reward[1]);
+            Text titulo = ResultScreen.GetComponent<RectTransform>().Find("WhiteScreen/Title").GetComponent<Text>();
+            titulo.text = "Vc é burro hein";
+            index = 1;
         }
-
-        ResultScreen.SetActive(true);
+        
+        if(nucleo.jogada)
+            nucleo.jogadores[0].addPontuacao(index);
+        else
+            nucleo.jogadores[1].addPontuacao(index);
     }
 
     private bool verifyResult()
@@ -46,7 +49,7 @@ public class BalanceamentoController : MonoBehaviour
         int i = 0;
         for (; i < reagentes.Count; i++)
         {
-            if (reagentes[i].Balanco !=
+            if (reagentes[i].Resposta !=
                 int.Parse(formules[i].transform.Find("Picker/quanity").GetComponent<Text>().text))
             {
                 removeAllFormules();
@@ -57,7 +60,7 @@ public class BalanceamentoController : MonoBehaviour
         List<MoleculaForma> produtos = nucleo.currentEquation.Produto;
         for (int j = 0; j < produtos.Count; j++)
         {
-            if (produtos[j].Balanco !=
+            if (produtos[j].Resposta !=
                 int.Parse(formules[i].transform.Find("Picker/quanity").GetComponent<Text>().text))
             {
                 removeAllFormules();

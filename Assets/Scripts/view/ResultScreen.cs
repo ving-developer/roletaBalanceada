@@ -7,6 +7,7 @@ public class ResultScreen : MonoBehaviour
     public RectTransform screen;
     public GameObject playerUm;
     public GameObject playerDois;
+    public GameObject blast;
     private GameObject currentPlayer;
     private int current;
     private Text scoreText;
@@ -15,7 +16,8 @@ public class ResultScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (NucleoController.instance().jogada)//invertido pq 
+        //define quem é o jogador atual, que será instanciado no centro da tela de resultado
+        if (NucleoController.instance().jogada)
         {
             currentPlayer = playerUm;
             current = 0;
@@ -44,6 +46,11 @@ public class ResultScreen : MonoBehaviour
     void Update()
     {
         
+    }
+    //este metodo deve ser chamado ao acertar uma questao, mostrando os canhoes de confetti que começam desabilitados
+    public void showBlast()
+    {
+        blast.active = true;
     }
     
     

@@ -11,25 +11,20 @@ public class FormuleListAdapter : MonoBehaviour
     public RectTransform plusSing;
     public RectTransform reagentes;
     public RectTransform produtos;
-    public Text quantidadeMoleculasReagente;
-    public Text quantidadeMoleculasProduto;
 
     void Start(){
-        quantidadeMoleculasReagente.text = "";
-        quantidadeMoleculasProduto.text = "AchaBom";
         updateItens(NucleoController.instance().currentEquation);
         reagentes.Find("ViewPort/Content").GetComponent<RectTransform>().position = new Vector3(31.90425f,-259.0114f,0);
         produtos.Find("ViewPort/Content").GetComponent<RectTransform>().position = new Vector3(183.0772f,-259.0114f,0);
     }
-    
-   
+
     private void updateItens(Equacao equacao){
         
 
         foreach (var reagentes in equacao.Reagente){
             var instance = GameObject.Instantiate(prefab.gameObject) as GameObject;
             instance.transform.SetParent(this.reagentes.Find("ViewPort/Content"),false);
-            initializeItemView(instance,reagentes);
+            initializeItemView(instance,reagentes, 1);
             BalanceamentoController.addFormule(instance);
             //Debug.Log(reagentes.Balanco);
 
@@ -43,7 +38,7 @@ public class FormuleListAdapter : MonoBehaviour
         foreach (var produtos in equacao.Produto){
             var instance = GameObject.Instantiate(prefab.gameObject) as GameObject;
             instance.transform.SetParent(this.produtos.Find("ViewPort/Content"),false);
-            initializeItemView(instance,produtos);
+            initializeItemView(instance,produtos, 0);
             //Debug.Log(produtos.Balanco);
 
             BalanceamentoController.addFormule(instance);
@@ -54,7 +49,8 @@ public class FormuleListAdapter : MonoBehaviour
         }
     }
     
-    private void initializeItemView(GameObject viewGameObject,  MoleculaForma molecula){
+    private void initializeItemView(GameObject viewGameObject,  MoleculaForma molecula, int tipo){
         viewGameObject.transform.Find("FormuleName").GetComponent<Text>().text=molecula.Molecula.ToString();
+        viewGameObject.GetComponent<Formule>().setTipo(tipo);
     }
 }

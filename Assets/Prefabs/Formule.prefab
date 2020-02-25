@@ -299,6 +299,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   formuleQuanity: {fileID: 6531297351744653481}
+  formuleName: {fileID: 1437682426977239394}
+  eventSystem: {fileID: 0}
 --- !u!1 &1437682426977239392
 GameObject:
   m_ObjectHideFlags: 0

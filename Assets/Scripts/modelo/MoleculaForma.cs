@@ -14,11 +14,15 @@ public class MoleculaForma
 
 	private int balanco;
 
+    private int resposta;
+
 	private Molecula molecula;
 
     public string Tipo { get => tipo; set => tipo = value; }
     public int Sequencia { get => sequencia; set => sequencia = value; }
     public int Balanco { get => balanco; set => balanco = value; }
+    
+    public int Resposta { get => resposta; set => resposta = value; }
     public Molecula Molecula { get => molecula; set => molecula = value; }
     public int Id { get => id; set => id = value; }
 
@@ -34,7 +38,8 @@ public class MoleculaForma
                 moleculaForma.Molecula = moleculas[reader.GetInt32(1)];
                 moleculaForma.Tipo = reader.GetString(2);
                 moleculaForma.Sequencia = reader.GetInt32(3);
-                moleculaForma.Balanco = reader.GetInt32(4);
+                moleculaForma.Resposta = reader.GetInt32(4);
+                moleculaForma.Balanco = 0;
                 if(moleculaForma.Tipo == "reagente"){
                     equacao.Reagente.Add(moleculaForma);
                 } else{
