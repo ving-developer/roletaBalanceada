@@ -17,7 +17,7 @@ public class ResultScreen : MonoBehaviour
     void Start()
     {
         //define quem é o jogador atual, que será instanciado no centro da tela de resultado
-        if (NucleoController.instance().jogada)
+        if (NucleoController.instance().jogada == 0)
         {
             currentPlayer = playerUm;
             current = 0;
@@ -59,7 +59,7 @@ public class ResultScreen : MonoBehaviour
         if (!verifyOver())
         {
             if(nucleo.jogadores.Count>1)
-                nucleo.jogada = !nucleo.jogada;
+                nucleo.passarJogada();
             SceneManager.LoadScene(5);
         }
         else if (nucleo.jogadores.Count > 1)

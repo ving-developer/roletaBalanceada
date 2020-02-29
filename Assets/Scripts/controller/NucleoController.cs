@@ -25,17 +25,19 @@ public class NucleoController
     //array list que contem todos os jogadores do jogo atual
     public List<Jogador> jogadores;
 
-    //um bool indicando de quem é a vez de responder, true para player 1 false para o 2
-    public bool jogada;
-
+    //um int indicando de quem é a vez de responder, 0 pro player um e sucessivamente
+    public int jogada;
 
     //um inteiro representando em qual rodada atual se encontra
     public int rodada;
 
 
-    //um array de duas posicoes contendo o valor ganho ao acertar na posicao 0 e o ganho ao errar na posicao 1
-    public int[] reward;
-
+    //variavel que soma a pontuacao ao jogador acertar uma questao
+    public int pontuacaoAcerto;
+    
+    
+    //variavel que soma a pontuacao ao jogador errar uma questao
+    public int pontuacaoErro;
 
 
 
@@ -49,26 +51,26 @@ public class NucleoController
 
     public void acaoAmarelo(){
         currentEquation = ControladorEquacoes.instance().pegarEquacao("Médio");
-        reward[0] = 30;
-        reward[1] = 0;
+        pontuacaoAcerto = 30;
+        pontuacaoErro = 0;
     }
 
     public void acaoAzul() {
         currentEquation = ControladorEquacoes.instance().pegarEquacao("Facil");
-        reward[0] = 10;
-        reward[1] = 0;
+        pontuacaoAcerto = 10;
+        pontuacaoErro = 0;
     }
 
     public void acaoVermelho() {
         currentEquation = ControladorEquacoes.instance().pegarEquacao("Dificil");
-        reward[0] = 40;
-        reward[1] = 0;
+        pontuacaoAcerto = 40;
+        pontuacaoErro = 0;
     }
 
     public void acaoVerde() {
         executarAcao(new System.Random().Next(1, 7));
-        reward[0] = 50;
-        reward[1] = -20;
+        pontuacaoAcerto = 50;
+        pontuacaoErro = -20;
     }
 
 
@@ -90,9 +92,8 @@ public class NucleoController
         if(preferences.Count==0)//podera ser removido quando adicionado um select no banco de dados pra preferencias
             updatePreferences();
         jogadores = new List<Jogador>();
-        jogada = true;
+        jogada = 0;
         rodada = 1;
-        reward = new int[2];
         controladorEquacoes.resetarEquacoes();
     }
 
@@ -109,14 +110,17 @@ public class NucleoController
         jogador.salvar();
     }
 
+    public void passarJogada()
+    {
+        if (jogada > 0)
+            jogada = 0;
+        else
+            jogada = 1;
+
+    }
+
 
     public void savePreferences(){
         //aqui deve ser chamado um metodo que salva na memoria os atuais dados salvos no dictionary preferences
     }
-
-
- 
-
-
-
 }

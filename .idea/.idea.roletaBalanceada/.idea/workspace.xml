@@ -75,7 +75,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/view/Roulette.cs" />
         <option value="$PROJECT_DIR$/Assets/Confetti/Scripts/Window_Confetti.cs" />
         <option value="$PROJECT_DIR$/Assets/Confetti/Scripts/ConfettiSpritesAnimator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/controller/SorteioMotor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/ConfettiSpritesAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/BlastConfetti.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/Window_Confetti.cs" />
@@ -86,15 +85,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/view/Clock.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/Preference.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/ConfigController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/view/ResultScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/modelo/Jogador.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/controller/NucleoController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/view/FormuleListAdapter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/Formule.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controladores/controladorPrimeiraTela.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/MoleculeQuanityAdapter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/modelo/MoleculaForma.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/BalanceamentoController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/controller/SorteioMotor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/controller/NucleoController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/view/ResultScreen.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/view/FormuleListAdapter.cs" />
       </list>
     </option>
   </component>
@@ -163,6 +163,7 @@
       <workItem from="1582583004908" duration="14592000" />
       <workItem from="1582640888145" duration="3962000" />
       <workItem from="1582649569654" duration="6609000" />
+      <workItem from="1583010603932" duration="1813000" />
     </task>
     <servers />
   </component>

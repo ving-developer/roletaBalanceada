@@ -36,9 +36,9 @@ public class SorteioMotor : MonoBehaviour
             jogadorDois.GetComponent<RectTransform>().Find("Tempo").GetComponent<Text>().text = nucleo.jogadores[1].addTempo(Time.deltaTime);
         }
         
-        if(nucleo.jogadores.Count == 1) { 
+        if(nucleo.jogadores.Count == 1) {
             playerSelector.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 202, -1005.874f);
-        } else if (nucleo.jogada){
+        } else if (nucleo.jogada == 0){//0 corresponde ao jogador um
             playerSelector.GetComponent<RectTransform>().anchoredPosition = new Vector3(-215, 202, -1005.874f);
         }else{
             playerSelector.GetComponent<RectTransform>().anchoredPosition = new Vector3(197, 202, -1005.874f);

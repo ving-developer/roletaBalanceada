@@ -9,34 +9,28 @@ public class BalanceamentoController : MonoBehaviour
 
     private void Update(){
         NucleoController nucleo = NucleoController.instance();
-        if (nucleo.jogada && !ResultScreen.active){
-            nucleo.jogadores[0].addTempo(Time.deltaTime);
-        }else if(!ResultScreen.active){
-            nucleo.jogadores[1].addTempo(Time.deltaTime);
+        if (!ResultScreen.active){
+            nucleo.jogadores[nucleo.jogada].addTempo(Time.deltaTime);
         }
     }
 
     public void sendResult()
     {
-        int index;
         NucleoController nucleo = NucleoController.instance();
         nucleo.rodada++;
         
         ResultScreen.SetActive(true);
         
         if (verifyResult()){
-            index = 0;
             ResultScreen.GetComponent<ResultScreen>().showBlast();
+            nucleo.jogadores[nucleo.jogada].addPontuacao(nucleo.pontuacaoAcerto);
         }else{
             Text titulo = ResultScreen.GetComponent<RectTransform>().Find("WhiteScreen/Title").GetComponent<Text>();
             titulo.text = "Resposta incorreta!";
-            index = 1;
+            nucleo.jogadores[nucleo.jogada].addPontuacao(nucleo.pontuacaoErro);
         }
         
-        if(nucleo.jogada)
-            nucleo.jogadores[0].addPontuacao(index);
-        else
-            nucleo.jogadores[1].addPontuacao(index);
+        
     }
 
     private bool verifyResult()

@@ -26,7 +26,7 @@ public class FormuleListAdapter : MonoBehaviour
             instance.transform.SetParent(this.reagentes.Find("ViewPort/Content"),false);
             initializeItemView(instance,reagentes, 1);
             BalanceamentoController.addFormule(instance);
-            //Debug.Log(reagentes.Balanco);
+            Debug.Log(reagentes.Resposta);
 
             if (!reagentes.Equals(equacao.Reagente[equacao.Reagente.Count - 1])){
                 var plusSing = GameObject.Instantiate(this.plusSing.gameObject) as GameObject;
@@ -39,7 +39,7 @@ public class FormuleListAdapter : MonoBehaviour
             var instance = GameObject.Instantiate(prefab.gameObject) as GameObject;
             instance.transform.SetParent(this.produtos.Find("ViewPort/Content"),false);
             initializeItemView(instance,produtos, 0);
-            //Debug.Log(produtos.Balanco);
+            Debug.Log(produtos.Resposta);
 
             BalanceamentoController.addFormule(instance);
             if (!produtos.Equals(equacao.Produto[equacao.Produto.Count - 1])){
