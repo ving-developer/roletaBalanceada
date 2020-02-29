@@ -41,32 +41,32 @@ public class BalanceamentoController : MonoBehaviour
 
     private bool verifyResult()
     {
-        NucleoController nucleo = NucleoController.instance();
-        List<MoleculaForma> reagentes = nucleo.currentEquation.Reagente;
-        int i = 0;
-        for (; i < reagentes.Count; i++)
-        {
-            if (reagentes[i].Resposta !=
-                int.Parse(formules[i].transform.Find("Picker/quanity").GetComponent<Text>().text))
-            {
-                removeAllFormules();
-                return false;
-            }
-        }
-        
-        List<MoleculaForma> produtos = nucleo.currentEquation.Produto;
-        for (int j = 0; j < produtos.Count; j++)
-        {
-            if (produtos[j].Resposta !=
-                int.Parse(formules[i].transform.Find("Picker/quanity").GetComponent<Text>().text))
-            {
-                removeAllFormules();
-                return false;
-            }
-            i++;
-        }
-        removeAllFormules();
-        return true;
+        /* NucleoController nucleo = NucleoController.instance();
+         List<MoleculaForma> reagentes = nucleo.currentEquation.Reagente;
+         int i = 0;
+         for (; i < reagentes.Count; i++)
+         {
+             if (reagentes[i].Resposta !=  int.Parse(formules[i].transform.Find("Picker/quanity").GetComponent<Text>().text))
+             {
+                 removeAllFormules();
+                 return false;
+             }
+         }
+
+         List<MoleculaForma> produtos = nucleo.currentEquation.Produto;
+         for (int j = 0; j < produtos.Count; j++)
+         {
+             if (produtos[j].Resposta !=
+                 int.Parse(formules[i].transform.Find("Picker/quanity").GetComponent<Text>().text))
+             {
+                 removeAllFormules();
+                 return false;
+             }
+             i++;
+         }
+         removeAllFormules();*/
+
+        return NucleoController.instance().currentEquation.verificarResultado() ;
     }
 
     public static void addFormule(GameObject added)

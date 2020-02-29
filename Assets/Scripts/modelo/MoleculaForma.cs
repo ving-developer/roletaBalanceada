@@ -55,5 +55,10 @@ public class MoleculaForma
         return molecula.quantidadeAtomos(balanco);
     }
 
+
+    public bool taCerto() {
+        return this.Balanco == this.Resposta;
+    }
+
 }
 

@@ -84,6 +84,22 @@ public class Equacao{
         return $"{equacaoReagente} = {equacaoProduto}";
     }
 
+
+    public bool verificarResultado() {
+        foreach(MoleculaForma m in reagente){
+            if (!m.taCerto()){
+                return false;
+            }
+        }
+
+        foreach (MoleculaForma m in produto){
+            if (!m.taCerto()){
+                return false;
+            }
+        }
+        return true;
+    }
+
     public List<AtomoQuantificado> quantidadeAtomosReagente() {
         return quantidadeAtomos(reagente);
     }
