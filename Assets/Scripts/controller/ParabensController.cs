@@ -24,7 +24,7 @@ public class ParabensController : MonoBehaviour
 
     private void adjustSufix(){
         if (int.Parse(NucleoController.instance().jogadores[0].getPontuacao()) < 20){
-            sufix.text = "Muito fraco, você precisa de aulas com o Diego.";
+            sufix.text = "Não foi desta vez, você precisa estudar mais.";
         }else if (int.Parse(NucleoController.instance().jogadores[0].getPontuacao()) < 50){
             sufix.text = "Está pegando o jeito!";
         }else{

@@ -99,44 +99,28 @@ public class Roulette : MonoBehaviour
 
         if (angle <= 45){//vermelho de baixo
             SceneManager.LoadScene(1);
-            //NucleoController.reward[0] = 40;
-            //NucleoController.reward[1] = 0;
             return 1;
         }else if (angle <= 90){//amarelo de baixo
             SceneManager.LoadScene(1);
-            //NucleoController.reward[0] = 30;
-            //NucleoController.reward[1] = 0;
             return 2;
         }if (angle<=135) { //azul de cima
             SceneManager.LoadScene(1);
-            //NucleoController.reward[0] = 30;
-            //NucleoController.reward[1] = -10;
             return 3;
         }if (angle<=180){ //verde de cima
             SceneManager.LoadScene(1);
-            //NucleoController.reward[0] = 20;
-            //NucleoController.reward[1] = -10;
             return 4;
         }if (angle<=225){//vermelho de cima
             SceneManager.LoadScene(1);
-            //NucleoController.reward[0] = 50;
-            //NucleoController.reward[1] = -10;
             return 5;
         }if (angle <= 270){ //amarelo de cima
             SceneManager.LoadScene(1);
-            //NucleoController.reward[0] = 40;
-            //NucleoController.reward[1] = -10;
             return 6;
         } else if (angle <= 315){ //azul de baixo
             SceneManager.LoadScene(1);
-            //NucleoController.reward[0] = 20;
-            //NucleoController.reward[1] = 0;
             return 7;
         } else{
             //verde de baixo
             SceneManager.LoadScene(1);
-            //NucleoController.reward[0] = 10;
-            //NucleoController.reward[1] = -10;
             return 8;
         }
     }

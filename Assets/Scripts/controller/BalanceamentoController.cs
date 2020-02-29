@@ -24,15 +24,12 @@ public class BalanceamentoController : MonoBehaviour
         
         ResultScreen.SetActive(true);
         
-        if (verifyResult())
-        {
+        if (verifyResult()){
             index = 0;
             ResultScreen.GetComponent<ResultScreen>().showBlast();
-        }
-        else
-        {
+        }else{
             Text titulo = ResultScreen.GetComponent<RectTransform>().Find("WhiteScreen/Title").GetComponent<Text>();
-            titulo.text = "Vc é burro hein";
+            titulo.text = "Resposta incorreta!";
             index = 1;
         }
         

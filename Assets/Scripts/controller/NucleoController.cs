@@ -11,7 +11,7 @@ public class NucleoController
 
     private NucleoController() {
         currentEquation = ControladorEquacoes.instance().pegarEquacao("Facil");
-        Dictionary<int, AtomoQuantificado>.ValueCollection atomos =  currentEquation.quantidadeAtomosReagente();
+        List<AtomoQuantificado> atomos =  currentEquation.quantidadeAtomosReagente();
         
         foreach(AtomoQuantificado at in atomos){
             Debug.Log($"{at.Atomo.Sigla}:{at.Quantidade}");
@@ -49,18 +49,26 @@ public class NucleoController
 
     public void acaoAmarelo(){
         currentEquation = ControladorEquacoes.instance().pegarEquacao("Médio");
+        reward[0] = 30;
+        reward[1] = 0;
     }
 
     public void acaoAzul() {
         currentEquation = ControladorEquacoes.instance().pegarEquacao("Facil");
+        reward[0] = 10;
+        reward[1] = 0;
     }
 
     public void acaoVermelho() {
         currentEquation = ControladorEquacoes.instance().pegarEquacao("Dificil");
+        reward[0] = 40;
+        reward[1] = 0;
     }
 
     public void acaoVerde() {
         executarAcao(new System.Random().Next(1, 7));
+        reward[0] = 50;
+        reward[1] = -20;
     }
 
 

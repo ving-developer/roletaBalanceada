@@ -21,7 +21,7 @@ public class ScoreListAdapter : MonoBehaviour
         List<ScoreItemModel> models = new List<ScoreItemModel>();
         List<Jogador> jogadores = Jogador.pegarTodosJogador();
         foreach (Jogador j in jogadores){
-            models.Add(new ScoreItemModel(j.Nome,j.Pontuacao));
+            models.Add(new ScoreItemModel(j.Nome,(int)j.Pontuacao));
         }
         return models;
     }

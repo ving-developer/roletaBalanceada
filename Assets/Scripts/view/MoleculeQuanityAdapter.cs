@@ -23,7 +23,7 @@ public class MoleculeQuanityAdapter : MonoBehaviour
         instanciarMoleculas(NucleoController.instance().currentEquation.quantidadeAtomosReagente(),reagentes);
     }
 
-    private void instanciarMoleculas(Dictionary<int, AtomoQuantificado>.ValueCollection atomos, RectTransform list)
+    private void instanciarMoleculas(List< AtomoQuantificado> atomos, RectTransform list)
     {
         foreach (AtomoQuantificado atomo in atomos){
             GameObject instance = Instantiate(prefab.gameObject);
@@ -35,7 +35,7 @@ public class MoleculeQuanityAdapter : MonoBehaviour
 
     public void atualizarQuantidadesMoleculas()
     {
-        Dictionary<int, AtomoQuantificado>.ValueCollection atomos =
+        List<AtomoQuantificado> atomos =
             NucleoController.instance().currentEquation.quantidadeAtomosProduto();
         int i = 0;
         

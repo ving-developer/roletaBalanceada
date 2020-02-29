@@ -84,16 +84,16 @@ public class Equacao{
         return $"{equacaoReagente} = {equacaoProduto}";
     }
 
-    public Dictionary<int, AtomoQuantificado>.ValueCollection quantidadeAtomosReagente() {
+    public List<AtomoQuantificado> quantidadeAtomosReagente() {
         return quantidadeAtomos(reagente);
     }
 
-    public Dictionary<int, AtomoQuantificado>.ValueCollection quantidadeAtomosProduto() {
+    public List<AtomoQuantificado> quantidadeAtomosProduto() {
         return quantidadeAtomos(produto);
     }
 
 
-    private Dictionary<int, AtomoQuantificado>.ValueCollection quantidadeAtomos(List<MoleculaForma> moleculaFormas ) {
+    private List<AtomoQuantificado> quantidadeAtomos(List<MoleculaForma> moleculaFormas ) {
         List<AtomoQuantificado> atomosQuantificados = new List<AtomoQuantificado>();
 
         Dictionary<int, AtomoQuantificado> atomos = new Dictionary<int, AtomoQuantificado>();
@@ -112,8 +112,9 @@ public class Equacao{
             }
         }
 
-
-        return atomos.Values;
+        List<AtomoQuantificado> atomosOrdenado = new List<AtomoQuantificado>(atomos.Values);
+        atomosOrdenado.Sort();
+        return atomosOrdenado;
     }
 
     }

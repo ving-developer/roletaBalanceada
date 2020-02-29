@@ -9,11 +9,11 @@ using Mono.Data.SqliteClient;
 public class Jogador{
     private int id;
 	private string nome;
-	private int pontuacao;
+	private float pontuacao;
 	private float tempo;
 
     public string Nome { get => nome; set => nome = value; }
-    public int Pontuacao { get => pontuacao; set => pontuacao = value; }
+    public float Pontuacao { get => pontuacao; set => pontuacao = value; }
     public int Id { get => id; set => id = value; }
     public float Tempo { get => tempo; set => tempo = value; }
 
@@ -68,8 +68,8 @@ public class Jogador{
             Jogador jogador = new Jogador();
             jogador.Id = reader.GetInt32(0);
             jogador.Nome = reader.GetString(1);
-            jogador.pontuacao = reader.GetInt32(2);
-            jogador.Tempo = reader.GetInt32(3);
+            jogador.pontuacao = reader.GetFloat(2);
+            jogador.Tempo = reader.GetFloat(3);
             jogadores.Add(jogador);
         }
         Conexoes.fecharConexao();

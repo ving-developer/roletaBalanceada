@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Data;
 using Mono.Data.SqliteClient;
 
-public class AtomoQuantificado{
+public class AtomoQuantificado :  System.IComparable<AtomoQuantificado> {
     private int id;
 	private int quantidade;
 
@@ -45,6 +45,22 @@ public class AtomoQuantificado{
      
         return atomosQuantificados;
 
+    }
+
+    public int CompareTo(AtomoQuantificado comparePart) {
+        // A null value means that this object is greater.
+        if (comparePart == null)
+            return 1;
+
+        else
+            return this.Atomo.Sigla.CompareTo(comparePart.Atomo.Sigla);
+    }
+
+    public override bool Equals(object obj) {
+        if (obj == null){
+            return false;
+        }
+        return (obj as AtomoQuantificado).Atomo.Sigla == this.Atomo.Sigla;
     }
 
     override
