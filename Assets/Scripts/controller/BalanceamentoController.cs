@@ -4,18 +4,27 @@ using UnityEngine.UI;
 
 public class BalanceamentoController : MonoBehaviour
 {
+
+
     public GameObject ResultScreen;
+    public RectTransform clock;
     private static List<GameObject> formules;
+    private float tempoJogada = 0;
+
+    public void Start() {
+        tempoJogada = 0; 
+    }
 
     private void Update(){
         NucleoController nucleo = NucleoController.instance();
         if (!ResultScreen.active){
+            tempoJogada += Time.deltaTime;
             nucleo.jogadores[nucleo.jogada].addTempo(Time.deltaTime);
         }
     }
 
-    public void sendResult()
-    {
+    public void sendResult(){
+        ((Clock)clock.GetComponent("Clock")).stopClock();
         NucleoController nucleo = NucleoController.instance();
         nucleo.rodada++;
         
@@ -23,7 +32,8 @@ public class BalanceamentoController : MonoBehaviour
         
         if (verifyResult()){
             ResultScreen.GetComponent<ResultScreen>().showBlast();
-            nucleo.jogadores[nucleo.jogada].addPontuacao(nucleo.pontuacaoAcerto);
+            Debug.Log($"Tempo: {tempoJogada} porcentagem: {(((int)tempoJogada) * 100 / NucleoController.preferences["TempoConfiguracao"].getInt())} ");
+            nucleo.jogadores[nucleo.jogada].addPontuacao( (nucleo.pontuacaoAcerto * (100 - (((int)tempoJogada) * 100/NucleoController.preferences["TempoConfiguracao"].getInt()))/100 ) + 5  );
         }else{
             Text titulo = ResultScreen.GetComponent<RectTransform>().Find("WhiteScreen/Title").GetComponent<Text>();
             titulo.text = "Resposta incorreta!";

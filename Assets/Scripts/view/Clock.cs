@@ -22,13 +22,18 @@ public class Clock : MonoBehaviour
             day += Time.deltaTime / totalSeconds;
             float dayNormalized = day % 1f;
             clockHandTransform.eulerAngles = new Vector3(0,0,-dayNormalized*DEGREES_PER_DAY);
-        }else if(!stop)
+        }else if (!stop){
             timeOut();
+        }
+            
     }
 
-    private void timeOut()
-    {
+    private void timeOut(){
         eventSistem.GetComponent<BalanceamentoController>().sendResult();
+        stop = true;
+    }
+
+    public void stopClock() {
         stop = true;
     }
 }

@@ -55,7 +55,7 @@ public class Jogador{
 
 	public void addPontuacao(int quantidade)
 	{
-		Pontuacao += quantidade;
+		Pontuacao += quantidade ;
 	}
 
 
