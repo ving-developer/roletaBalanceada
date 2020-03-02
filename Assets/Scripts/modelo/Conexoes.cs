@@ -3,12 +3,55 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Data;
 using Mono.Data.SqliteClient;
+using System.IO;
+using System;
+
 
 public class Conexoes {
-    private static string urlDataBase = "URI=file:bancoQuimico.db";
+    private static string filepath = Application.persistentDataPath + "/bancoQuimico.db";
+    private static string urlDataBase = "URI=file:"+ filepath;
+    //private static string urlDataBase = "URI=file:bancoQuimico.db";
     private static IDbConnection _connection = null;
 
     public static IDataReader pegarReader(string query) {
+
+        if (!File.Exists(filepath))
+        {
+            // If not found on android will create Tables and database
+
+            Debug.LogWarning("File \"" + filepath + "\" does not exist. Attempting to create from \"" +
+                             Application.dataPath + "!/assets/Employers");
+
+
+
+            // UNITY_ANDROID
+            WWW loadDB = new WWW("jar:file://" + Application.dataPath + "!/assets/bancoQuimico.db");
+            while (!loadDB.isDone) { }
+            // then save to Application.persistentDataPath
+            File.WriteAllBytes(filepath, loadDB.bytes);
+
+
+
+
+        }
+
+        /* if (!File.Exists(filepath)){
+
+             // if it doesn't ->
+
+             // open StreamingAssets directory and load the db ->
+
+             WWW loadDB = new WWW("jar:file://" + Application.dataPath + "!/assets/bancoQuimico.db");  // this is the path to your StreamingAssets in android
+
+             while (!loadDB.isDone) { }  // CAREFUL here, for safety reasons you shouldn't let this while loop unattended, place a timer and error check
+
+             // then save to Application.persistentDataPath
+
+             File.WriteAllBytes(filepath, loadDB.bytes);
+         }*/
+
+
+
         _connection = new SqliteConnection(urlDataBase);
 
         IDbCommand _command = _connection.CreateCommand();
