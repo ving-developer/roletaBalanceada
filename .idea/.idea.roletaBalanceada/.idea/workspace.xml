@@ -49,6 +49,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/SorteioMotor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/ConfigController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/ResultScreen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/ControladorEquacoes.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/BalanceamentoController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/Roulette.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Balanceamento.unity" root0="FORCE_HIGHLIGHTING" />
@@ -67,9 +68,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/SorteioMotor].cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/PrincipalMotor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/JogadorController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/modelo/Equacao.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/Nucleo.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/controller/ParabensController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/PontuacaoController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/RegrasController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/Roulette.cs" />
@@ -89,12 +88,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/view/Formule.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controladores/controladorPrimeiraTela.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/MoleculeQuanityAdapter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/modelo/MoleculaForma.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/BalanceamentoController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/SorteioMotor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/NucleoController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/ResultScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/FormuleListAdapter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/controller/ParabensController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/modelo/MoleculaForma.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/modelo/Equacao.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/controller/ControladorEquacoes.cs" />
       </list>
     </option>
   </component>
@@ -164,6 +166,7 @@
       <workItem from="1582640888145" duration="3962000" />
       <workItem from="1582649569654" duration="6609000" />
       <workItem from="1583010603932" duration="1813000" />
+      <workItem from="1583107281114" duration="5849000" />
     </task>
     <servers />
   </component>

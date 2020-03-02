@@ -50,13 +50,7 @@ public class ParabensController : MonoBehaviour
             
             verifyName();
             
-            if (jogadores.Count > 1)
-            {
-                jogadores.RemoveAt(0);
-                SceneManager.LoadScene(2);
-            }
-            else
-                saveAndContinue();
+            saveAndContinue();
         }
         catch (ArgumentException e)
         {
@@ -68,8 +62,20 @@ public class ParabensController : MonoBehaviour
     }
 
     private void saveAndContinue(){
+        List<Jogador> jogadores = NucleoController.instance().jogadores;
+        //salva o jogador da tela atual
         NucleoController.instance().salvarJogador(inputText.text);
-        SceneManager.LoadScene(3);
+        //caso o array de jogadores seja maior que um, ele ira excluir o jogador atual e renderizar a mesma tela com o prox jogador
+        //decrementando o array de jogadores
+        if (jogadores.Count > 1)
+        {
+            jogadores.RemoveAt(0);
+            SceneManager.LoadScene(2);
+        }
+        else
+        {
+            SceneManager.LoadScene(3);
+        }
     }
     
     private void verifyName()
