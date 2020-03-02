@@ -60,5 +60,9 @@ public class MoleculaForma
         return this.Balanco == this.Resposta;
     }
 
+    public void resetarMolecula()
+    {
+        Balanco = 0;
+    }
 }
 

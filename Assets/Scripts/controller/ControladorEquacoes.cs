@@ -27,19 +27,28 @@ public class ControladorEquacoes {
     public static ControladorEquacoes instance() {
         return controlador;
     }
-
-    public void retirarQuestao(Equacao equacao) {
-
+    /**
+     * Recebe uma equacao como parametro, iguala o attr Utilizada como verdadeiro, impossibilitando esta equacao de ser
+     *     selecionada novamente enquanto for verdadeiro e por fim retorna esta equacao para ser utilizada.
+     */
+    public Equacao retirarQuestao(Equacao equacao)
+    {
+        equacao.Utilizada = true;
+        return equacao;
     }
-
-    public void retirarQuestao(int equacaoId) {
-        equacoes[equacaoId].Utilizada = true;
+    /**
+     * recebe um id correspondente ao dicionario de equacoes, iguala o attr Utilizada como verdadeiro,
+     * impossibilitando esta equacao de ser selecionada novamente e retorna a equacao correspondente.
+     */
+    public Equacao retirarQuestao(int equacaoId)
+    {
+        return retirarQuestao(equacoes[equacaoId]);
     }
 
 
     public void resetarEquacoes() {
         foreach (int index in equacoes.Keys){
-            equacoes[index].Utilizada = false;
+            equacoes[index].resetarEquacao();
         }
     }
 
@@ -57,8 +66,8 @@ public class ControladorEquacoes {
         }
         count = 0;
         while (listaEquacao[count++].Utilizada);
-
-        return listaEquacao[count-1];
+        
+        return retirarQuestao(listaEquacao[count-1]);
     }
 
 

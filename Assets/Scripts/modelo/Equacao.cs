@@ -133,5 +133,19 @@ public class Equacao{
         return atomosOrdenado;
     }
 
+
+    public void resetarEquacao()
+    {
+        Utilizada = false;
+        foreach (MoleculaForma var in reagente)
+        {
+            var.resetarMolecula();
+        }
+        
+        foreach (MoleculaForma var in produto)
+        {
+            var.resetarMolecula();
+        }
     }
+}
 
