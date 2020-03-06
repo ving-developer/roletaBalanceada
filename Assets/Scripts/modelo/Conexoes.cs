@@ -14,7 +14,7 @@ public class Conexoes {
     private static IDbConnection _connection = null;
 
     public static IDataReader pegarReader(string query) {
-
+        Debug.Log(Application.persistentDataPath);
         if (!File.Exists(filepath))
         {
             // If not found on android will create Tables and database
