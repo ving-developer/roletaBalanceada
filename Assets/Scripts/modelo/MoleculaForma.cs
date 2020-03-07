@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Data;
@@ -25,6 +25,9 @@ public class MoleculaForma
     public int Resposta { get => resposta; set => resposta = value; }
     public Molecula Molecula { get => molecula; set => molecula = value; }
     public int Id { get => id; set => id = value; }
+
+
+  
 
     public static void carregarMoleculaForma(Equacao equacao) {
 

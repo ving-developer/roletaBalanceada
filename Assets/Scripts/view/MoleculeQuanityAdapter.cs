@@ -68,7 +68,7 @@ public class MoleculeQuanityAdapter : MonoBehaviour
 
         foreach (var molecula in moleculas)
         {
-            if (molecula.Molecula.ToString() == formuleName)
+            if (molecula.Molecula.moleculaParaInterface() == formuleName)
             {
                 molecula.Balanco = value;
                 break;

@@ -9,6 +9,7 @@ public class Formule : MonoBehaviour
 {
     public Text formuleQuanity;
     public Text formuleName;
+    public Slider sliderValor;
     private int tipo;//0 para produto 1 para reagente
     
     // Start is called before the first frame update
@@ -25,11 +26,10 @@ public class Formule : MonoBehaviour
 
     public void more()
     {
-        int value = int.Parse(formuleQuanity.text);
-        if(value<99)
+        int value = getQuanity();
+        if(value<50)
         {
-            formuleQuanity.text = (value += 1).ToString();
-            MoleculeQuanityAdapter.atualizarBalanco(formuleName.text,tipo,value);
+            sliderValor.value = sliderValor.value + 1;
         }
     }
 
@@ -42,6 +42,11 @@ public class Formule : MonoBehaviour
             MoleculeQuanityAdapter.atualizarBalanco(formuleName.text,tipo,value);
         }
     }
+
+    public void atualizarBalanco() {
+        MoleculeQuanityAdapter.atualizarBalanco(formuleName.text, tipo, getQuanity());
+    }
+
 
     public int getQuanity()
     {

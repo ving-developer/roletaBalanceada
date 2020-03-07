@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Data;
@@ -19,6 +19,21 @@ public class Molecula
     public int Id { get => id; set => id = value; }
     public List<AtomoQuantificado> AtomosQuantificados { get => atomosQuantificados; set => atomosQuantificados = value; }
     public List<MoleculaCompoe> MoleculasCompoePrimaria { get => moleculasCompoePrimaria; set => moleculasCompoePrimaria = value; }
+
+
+    public string moleculaParaInterface() {
+        string moleculaNome = this.ToString();
+        int tamanho = 30;
+        moleculaNome = moleculaNome.Replace("3", $"<size='{tamanho}'>₃</size>")
+                           .Replace("2", $"<size='{tamanho}'>₂</size>")
+                           .Replace("4", $"<size='{tamanho}'>₄</size>")
+                           .Replace("5", $"<size='{tamanho}'>₅</size>")
+                           .Replace("6", $"<size='{tamanho}'>₆</size>")
+                           .Replace("7", $"<size='{tamanho}'>₇</size>")
+                           .Replace("7", $"<size='{tamanho}'>₈</size>")
+                           .Replace("9", $"<size='{tamanho}'>₉</size>");
+        return moleculaNome;
+    }
 
     public static Dictionary<int, Molecula> todasMoleculas() {
         if (moleculas == null)

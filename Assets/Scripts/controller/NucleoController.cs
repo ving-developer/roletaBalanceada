@@ -13,9 +13,7 @@ public class NucleoController
         currentEquation = ControladorEquacoes.instance().pegarEquacao("Facil");
         List<AtomoQuantificado> atomos =  currentEquation.quantidadeAtomosReagente();
         
-        foreach(AtomoQuantificado at in atomos){
-            Debug.Log($"{at.Atomo.Sigla}:{at.Quantidade}");
-        }
+       
     }
 
     public static NucleoController instance() {
@@ -100,8 +98,8 @@ public class NucleoController
     public void updatePreferences()//deve dar o select no banco de dados com as configs salvas (inicialmente as padrao)
     {
         preferences.Clear();
-        preferences.Add("TempoConfiguracao",new Preference(30));//deve ser o mesmo nome dado ao objeto configuracoes add na lista de confs
-        preferences.Add("TurnoConfiguracao",new Preference(2));
+        preferences.Add("TempoConfiguracao",new Preference(3*60));//deve ser o mesmo nome dado ao objeto configuracoes add na lista de confs
+        preferences.Add("TurnoConfiguracao",new Preference(10));
     }
 
     public void salvarJogador(string name) {

@@ -50,7 +50,8 @@ public class FormuleListAdapter : MonoBehaviour
     }
     
     private void initializeItemView(GameObject viewGameObject,  MoleculaForma molecula, int tipo){
-        viewGameObject.transform.Find("FormuleName").GetComponent<Text>().text=molecula.Molecula.ToString();
+        //viewGameObject.transform.Find("FormuleName").GetComponent<Text>().text=molecula.Molecula.ToString() ;
+        viewGameObject.transform.Find("FormuleName").GetComponent<Text>().text = molecula.Molecula.moleculaParaInterface();
         viewGameObject.GetComponent<Formule>().setTipo(tipo);
     }
 }

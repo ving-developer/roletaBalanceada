@@ -14,24 +14,14 @@ public class Conexoes {
     private static IDbConnection _connection = null;
 
     public static IDataReader pegarReader(string query) {
-        Debug.Log(Application.persistentDataPath);
+        //Debug.Log(Application.persistentDataPath);
         if (!File.Exists(filepath))
         {
-            // If not found on android will create Tables and database
-
-            Debug.LogWarning("File \"" + filepath + "\" does not exist. Attempting to create from \"" +
-                             Application.dataPath + "!/assets/Employers");
-
-
-
             // UNITY_ANDROID
             WWW loadDB = new WWW("jar:file://" + Application.dataPath + "!/assets/bancoQuimico.db");
             while (!loadDB.isDone) { }
             // then save to Application.persistentDataPath
             File.WriteAllBytes(filepath, loadDB.bytes);
-
-
-
 
         }
 

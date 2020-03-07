@@ -4,8 +4,10 @@ using UnityEngine.UI;
 
 public class BalanceamentoController : MonoBehaviour
 {
+    public AudioSource errou;
+    public AudioSource acertou;
 
-
+    public Text tituloResposta;
     public GameObject ResultScreen;
     public RectTransform clock;
     private static List<GameObject> formules;
@@ -24,19 +26,22 @@ public class BalanceamentoController : MonoBehaviour
     }
 
     public void sendResult(){
+
         ((Clock)clock.GetComponent("Clock")).stopClock();
         NucleoController nucleo = NucleoController.instance();
         nucleo.rodada++;
-        
         ResultScreen.SetActive(true);
         
         if (verifyResult()){
+            Debug.Log("Cheguei 2.5");
             ResultScreen.GetComponent<ResultScreen>().showBlast();
             Debug.Log($"Tempo: {tempoJogada} porcentagem: {(((int)tempoJogada) * 100 / NucleoController.preferences["TempoConfiguracao"].getInt())} ");
             nucleo.jogadores[nucleo.jogada].addPontuacao( (nucleo.pontuacaoAcerto * (100 - (((int)tempoJogada) * 100/NucleoController.preferences["TempoConfiguracao"].getInt()))/100 ) + 5  );
-        }else{
-            Text titulo = ResultScreen.GetComponent<RectTransform>().Find("WhiteScreen/Title").GetComponent<Text>();
-            titulo.text = "Resposta incorreta!";
+            tituloResposta.text = "Parabéns!";
+            acertou.Play();
+        } else{
+            errou.Play();
+            tituloResposta.text = "Errou!";
             nucleo.jogadores[nucleo.jogada].addPontuacao(nucleo.pontuacaoErro);
         }
         
@@ -45,30 +50,6 @@ public class BalanceamentoController : MonoBehaviour
 
     private bool verifyResult()
     {
-        /* NucleoController nucleo = NucleoController.instance();
-         List<MoleculaForma> reagentes = nucleo.currentEquation.Reagente;
-         int i = 0;
-         for (; i < reagentes.Count; i++)
-         {
-             if (reagentes[i].Resposta !=  int.Parse(formules[i].transform.Find("Picker/quanity").GetComponent<Text>().text))
-             {
-                 removeAllFormules();
-                 return false;
-             }
-         }
-
-         List<MoleculaForma> produtos = nucleo.currentEquation.Produto;
-         for (int j = 0; j < produtos.Count; j++)
-         {
-             if (produtos[j].Resposta !=
-                 int.Parse(formules[i].transform.Find("Picker/quanity").GetComponent<Text>().text))
-             {
-                 removeAllFormules();
-                 return false;
-             }
-             i++;
-         }
-         removeAllFormules();*/
 
         return NucleoController.instance().currentEquation.verificarResultado() ;
     }

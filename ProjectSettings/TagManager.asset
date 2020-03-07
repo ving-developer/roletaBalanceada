@@ -14,8 +14,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Retangulo
+  - FIm
   - 
   - 
   - 
@@ -40,4 +40,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Retangulo
+    uniqueID: 439530589
     locked: 0

@@ -31,7 +31,7 @@ public class ConfigController : MonoBehaviour
         GameObject timeObject = findInArray("TempoConfiguracao");
             
         if(int.Parse(timeObject.GetComponent<RectTransform>().Find("Picker/quanity").GetComponent<Text>().text) >
-           5)
+           60)
         {
             timeObject.GetComponent<RectTransform>().Find("Picker/quanity").GetComponent<Text>().text =
                 (NucleoController.preferences[timeObject.gameObject.name].getLess(5)).ToString();
@@ -42,7 +42,7 @@ public class ConfigController : MonoBehaviour
     {
         GameObject timeObject = findInArray("TempoConfiguracao");
         if(int.Parse(timeObject.GetComponent<RectTransform>().Find("Picker/quanity").GetComponent<Text>().text) <
-           90)
+           180)
         {
             timeObject.GetComponent<RectTransform>().Find("Picker/quanity").GetComponent<Text>().text =
                 (NucleoController.preferences[timeObject.gameObject.name].getPlus(5)).ToString();
@@ -70,7 +70,7 @@ public class ConfigController : MonoBehaviour
     {
         GameObject timeObject = findInArray("TurnoConfiguracao");
         if(int.Parse(timeObject.GetComponent<RectTransform>().Find("Picker/quanity").GetComponent<Text>().text) <
-           10)
+           16)
         {
             timeObject.GetComponent<RectTransform>().Find("Picker/quanity").GetComponent<Text>().text =
                 (NucleoController.preferences[timeObject.gameObject.name].getPlus(2)).ToString();
