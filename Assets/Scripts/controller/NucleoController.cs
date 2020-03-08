@@ -117,7 +117,6 @@ public class NucleoController
 
     }
 
-
     public void savePreferences(){
         //aqui deve ser chamado um metodo que salva na memoria os atuais dados salvos no dictionary preferences
     }

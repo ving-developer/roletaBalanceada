@@ -6,6 +6,7 @@ public class BalanceamentoController : MonoBehaviour
 {
     public AudioSource errou;
     public AudioSource acertou;
+    public AudioSource backgroundSound;
 
     public Text tituloResposta;
     public GameObject ResultScreen;
@@ -15,6 +16,7 @@ public class BalanceamentoController : MonoBehaviour
 
     public void Start() {
         tempoJogada = 0; 
+        playSound();
     }
 
     private void Update(){
@@ -26,7 +28,7 @@ public class BalanceamentoController : MonoBehaviour
     }
 
     public void sendResult(){
-
+        stopAllSounds();
         ((Clock)clock.GetComponent("Clock")).stopClock();
         NucleoController nucleo = NucleoController.instance();
         nucleo.rodada++;
@@ -44,13 +46,10 @@ public class BalanceamentoController : MonoBehaviour
             tituloResposta.text = "Errou!";
             nucleo.jogadores[nucleo.jogada].addPontuacao(nucleo.pontuacaoErro);
         }
-        
-        
     }
 
     private bool verifyResult()
     {
-
         return NucleoController.instance().currentEquation.verificarResultado() ;
     }
 
@@ -64,5 +63,15 @@ public class BalanceamentoController : MonoBehaviour
     public static void removeAllFormules()
     {
         formules = new List<GameObject>();
+    }
+
+    public void playSound()
+    {
+        backgroundSound.Play();
+    }
+
+    private void stopAllSounds()
+    {
+        backgroundSound.Stop();
     }
 }

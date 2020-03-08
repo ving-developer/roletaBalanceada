@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using controller;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
+using Button = UnityEngine.UI.Button;
 using Random = System.Random;
 
 public class Roulette : MonoBehaviour
@@ -30,11 +32,11 @@ public class Roulette : MonoBehaviour
             Rotate();
     }
 
-    public void sortRoulette(){
-        if(!isRotate){
-            isRotate = true;
-            speed = 11 * new System.Random().Next(10, 40);
-        }
+    public void sortRoulette()
+    {
+        Destroy(spinner.GetComponent<Button>());
+        isRotate = true;
+        speed = 11 * new System.Random().Next(10, 40);
     }
 
     private void Rotate(){

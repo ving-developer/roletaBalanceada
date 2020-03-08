@@ -14,8 +14,6 @@ public class FormuleListAdapter : MonoBehaviour
 
     void Start(){
         updateItens(NucleoController.instance().currentEquation);
-        reagentes.Find("ViewPort/Content").GetComponent<RectTransform>().position = new Vector3(31.90425f,-259.0114f,0);
-        produtos.Find("ViewPort/Content").GetComponent<RectTransform>().position = new Vector3(183.0772f,-259.0114f,0);
     }
 
     private void updateItens(Equacao equacao){
@@ -34,7 +32,6 @@ public class FormuleListAdapter : MonoBehaviour
             }
         }
 
-        //Debug.Log("Produtos:");
         foreach (var produtos in equacao.Produto){
             var instance = GameObject.Instantiate(prefab.gameObject) as GameObject;
             instance.transform.SetParent(this.produtos.Find("ViewPort/Content"),false);
