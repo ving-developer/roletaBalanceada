@@ -29,6 +29,12 @@ TextureImporter:
   - first:
       213: 8679765383510443904
     second: temaPrincipal_4
+  - first:
+      213: 3244117117298868501
+    second: temaPrincipal_4
+  - first:
+      213: -4165187200674007004
+    second: temaPrincipal_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -283,8 +289,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0874fd101a8b47870800000000000000
-      internalID: 8679765383510443904
+      spriteID: 5110d52845b650d20800000000000000
+      internalID: 3244117117298868501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: temaPrincipal_5
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 108
+        width: 99
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42872d02f484236c0800000000000000
+      internalID: -4165187200674007004
       vertices: []
       indices: 
       edges: []
