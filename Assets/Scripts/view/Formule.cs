@@ -10,7 +10,7 @@ public class Formule : MonoBehaviour
     public Text formuleQuanity;
     public Text formuleName;
     public Slider sliderValor;
-    public Text valorSliderAcima;
+    public RectTransform valorSliderAcima;
     private int tipo;//0 para produto 1 para reagente
     
     // Start is called before the first frame update
@@ -28,6 +28,15 @@ public class Formule : MonoBehaviour
      void mostrarValor(PointerEventData data) {
 
     }
+
+     public void showQuanity()
+     {
+         Vector3 handlePosition = sliderValor.GetComponent<RectTransform>().Find("Handle Slide Area/Handle")
+             .GetComponent<RectTransform>().position;
+         valorSliderAcima.position = new Vector3(handlePosition.x,valorSliderAcima.position.y,valorSliderAcima.position.z);
+         valorSliderAcima.GetComponent<Text>().text = getQuanity().ToString();
+         valorSliderAcima.GetComponent<Animator>().SetTrigger("show");
+     }
 
     public void more()
     {

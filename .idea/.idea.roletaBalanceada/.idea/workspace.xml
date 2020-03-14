@@ -57,6 +57,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/ConfettiSpritesAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/WinScreen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/MoleculeQuanityAdapter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/FormulaController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/ConfigurationsList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/Window_Confetti.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/Clock.cs" root0="FORCE_HIGHLIGHTING" />
@@ -84,7 +85,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/Preference.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/ConfigController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/modelo/Jogador.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/view/Formule.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controladores/controladorPrimeiraTela.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/MoleculeQuanityAdapter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/SorteioMotor.cs" />
@@ -99,6 +99,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/view/Roulette.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/NucleoController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/BalanceamentoController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/view/Formule.cs" />
       </list>
     </option>
   </component>
