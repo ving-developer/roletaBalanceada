@@ -49,7 +49,7 @@ public class BalanceamentoController : MonoBehaviour
     {
         if (numberOfStars > 0)
         {
-            if (tempoJogada > 2 && numberOfStars==2) //aparece a estrela da direita
+            if (tempoJogada > 2 && starsSpawned==2) //aparece a estrela da direita
             {
                 spawnStar(new Vector3(93, 262.24f, 0));
             }

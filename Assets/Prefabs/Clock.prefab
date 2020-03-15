@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7672549678299067530}
   - component: {fileID: 7672549678299067533}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Clock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa44fc91287ce51438dd4bf2c246287a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TOTAL_SECONDS: 30
+  eventSistem: {fileID: 0}
 --- !u!1 &7672549679153485964
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 7672549679153485967}
   - component: {fileID: 7672549679153485969}
   - component: {fileID: 7672549679153485966}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,8 +85,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: 4.79999}
+  m_SizeDelta: {x: 167, y: 124.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7672549679153485969
 CanvasRenderer:
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7672549679153485964}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -116,13 +116,14 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: c25f4704e213b2f4bb21a1302caa3866, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &7672549679312143803
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +135,7 @@ GameObject:
   - component: {fileID: 7672549679312143802}
   - component: {fileID: 7672549679312143804}
   - component: {fileID: 7672549679312143805}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: pointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 4.97, y: 31.05}
+  m_AnchoredPosition: {x: 0, y: 4.8}
+  m_SizeDelta: {x: 8.14, y: 39.45}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &7672549679312143804
 CanvasRenderer:
@@ -177,7 +178,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7672549679312143803}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -188,10 +189,11 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 9e0a836600e07024ca90ae32d22a8cf5, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1

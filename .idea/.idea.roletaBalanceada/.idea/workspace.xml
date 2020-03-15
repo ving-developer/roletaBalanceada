@@ -59,6 +59,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/MoleculeQuanityAdapter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/FormulaController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/ConfigurationsList.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/SobreController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/Window_Confetti.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/Clock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/BtnSelection.prefab" root0="FORCE_HIGHLIGHTING" />
@@ -172,6 +173,7 @@
       <workItem from="1582649569654" duration="6609000" />
       <workItem from="1583010603932" duration="1813000" />
       <workItem from="1583107281114" duration="5849000" />
+      <workItem from="1584279634089" duration="1384000" />
     </task>
     <servers />
   </component>

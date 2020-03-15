@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8717502441571671721}
   - component: {fileID: 3501966416538396323}
   - component: {fileID: 9194202279778408590}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: BtnSelection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 5414511318544844697}
   - component: {fileID: 6361590162562558939}
   - component: {fileID: 6651058708535645431}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,6 +220,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ClickBotao
+      objectReference: {fileID: 0}
+    - target: {fileID: 3121771052495791564, guid: a82412e98e1b6344b8c0d6e344e9a70a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3121771052495791565, guid: a82412e98e1b6344b8c0d6e344e9a70a,
         type: 3}

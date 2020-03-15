@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4696585709607864188}
   - component: {fileID: 301000569014892897}
   - component: {fileID: 1195080759712311230}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Screen
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 6
+      scalar: 8
       minScalar: 4
       maxCurve:
         serializedVersion: 2
@@ -337,7 +337,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 6
+      scalar: 8
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -712,15 +712,15 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 12
+    type: 16
     angle: 25
     length: 5
-    boxThickness: {x: 0, y: 0, z: 0}
+    boxThickness: {x: 0.18, y: 0.12, z: 1}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 0, y: -57.18, z: 0}
-    m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 1, y: 1, z: 1}
+    m_Position: {x: 0, y: -0.15, z: 0}
+    m_Rotation: {x: 0, y: -3.38, z: 0}
+    m_Scale: {x: 63.6, y: 114.28, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
