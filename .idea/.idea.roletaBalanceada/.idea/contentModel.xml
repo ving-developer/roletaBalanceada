@@ -14,12 +14,14 @@
             <e p="BalanceamentoController.cs" t="Include" />
             <e p="ConfigController.cs" t="Include" />
             <e p="ControladorEquacoes.cs" t="Include" />
+            <e p="FormulaController.cs" t="Include" />
             <e p="NucleoController.cs" t="Include" />
             <e p="ParabensController.cs" t="Include" />
             <e p="PontuacaoController.cs" t="Include" />
             <e p="Preference.cs" t="Include" />
             <e p="PrincipalController.cs" t="Include" />
             <e p="RegrasController.cs" t="Include" />
+            <e p="SobreController.cs" t="Include" />
             <e p="SorteioMotor.cs" t="Include" />
           </e>
           <e p="modelo" t="Include">

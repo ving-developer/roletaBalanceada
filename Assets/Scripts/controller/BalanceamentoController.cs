@@ -7,31 +7,86 @@ public class BalanceamentoController : MonoBehaviour
     public AudioSource errou;
     public AudioSource acertou;
     public AudioSource backgroundSound;
-    public SpriteRenderer estrelaEsquerda;
-    public SpriteRenderer estrelaMeio;
-    public SpriteRenderer estrelaDireita;
+    public GameObject starPrefab;
 
     public Text tituloResposta;
     public GameObject ResultScreen;
     public RectTransform clock;
     private static List<GameObject> formules;
-    private float tempoJogada = 0;
+    private float tempoJogada;
+    private int numberOfStars;
+    private int starsSpawned;
 
     public void Start() {
         tempoJogada = 0; 
         playSound();
-        acenderEstrelas();
     }
 
     private void Update(){
         NucleoController nucleo = NucleoController.instance();
-        if (!ResultScreen.active){
+        
+        if (!ResultScreen.active){//antes da tela de resultado
             tempoJogada += Time.deltaTime;
             nucleo.jogadores[nucleo.jogada].addTempo(Time.deltaTime);
         }
+        else//depois da tela de resultado
+        {
+            if (showStars())
+            {
+                tempoJogada += Time.deltaTime;
+            }
+        }
+    }
+    /**
+     * Verifica se ainda não foram renderizada todas as estrelas
+     *     indicadas no parâmetro numberOfStars.
+     *     Caso já tenham sido renderizadas, retorna falso.
+     *     Caso ainda não tenham sido renderizdas, cria sequencialmente
+     *     uma por uma das estrelas, em um intervalo de tempo
+     *     indicado por tempoJogada.
+     */
+    private bool showStars()
+    {
+        if (numberOfStars > 0)
+        {
+            if (tempoJogada > 2 && numberOfStars==2) //aparece a estrela da direita
+            {
+                spawnStar(new Vector3(93, 262.24f, 0));
+            }
+            else
+            {
+                if (tempoJogada > 1.5f && starsSpawned==1) //aparece a estrela do meio
+                {
+                    spawnStar(new Vector3(0, 305, 0));
+                }
+                else if (tempoJogada > 1 && starsSpawned==0) //aparece a estrela da esquerda
+                {
+                    spawnStar(new Vector3(-92, 262.24f, 0));
+                }
+            }
+
+            return true;
+        }
+        
+        return false;
+
+    }
+    /**
+     * Instancia o prefab de estrelas na tela, na posição em que for passada
+     *     como parâmetro (dentro da ResultScreen). Ao renderizar uma estrela,
+     *     diminui o saldo de estrelas "numberOfStars".
+     */
+    private void spawnStar(Vector3 position)
+    {
+        GameObject star = GameObject.Instantiate(starPrefab.gameObject);
+        star.transform.SetParent(ResultScreen.transform,false);
+        star.GetComponent<RectTransform>().anchoredPosition = position;
+        numberOfStars--;//diminuiu o "saldo" de spawn de estrelas
+        starsSpawned++;//aumenta o numero de estrelas que apareceram
     }
 
-    public void sendResult(){
+    public void sendResult()
+    {
         stopAllSounds();
         ((Clock)clock.GetComponent("Clock")).stopClock();
         NucleoController nucleo = NucleoController.instance();
@@ -51,46 +106,26 @@ public class BalanceamentoController : MonoBehaviour
             tituloResposta.text = "Parabéns!";
             acertou.Play();
         } else{
-            apagarEstrelas();
             errou.Play();
             tituloResposta.text = "Errou!";
             nucleo.jogadores[nucleo.jogada].addPontuacao(nucleo.pontuacaoErro);
         }
+        tempoJogada = 0;//zerou o tempo para ser usado na contagem da tela de resultado
     }
 
 
     private void arrumarEstrelas(int valorPercentual) {
-        if (valorPercentual< 25){
-            apagarEstrelas();
-        } else if (valorPercentual < 50){
-            apagarDuas();
-        } else if (valorPercentual < 75){
-            apagarUma();
-        } 
+        if (valorPercentual< 25)
+            numberOfStars = 0;//nenhuma estrela
+        else if (valorPercentual < 50)
+            numberOfStars = 1;//uma estrela
+        else if (valorPercentual < 75)
+            numberOfStars = 2;//duas estrela
+        else
+            numberOfStars = 3;//tres estrela
+
+        Debug.Log("numero de estrelas "+numberOfStars);
     }
-
-    private void apagarEstrelas() {
-        estrelaDireita.GetComponent<EstrelaControlador>().apagar();
-        estrelaEsquerda.GetComponent<EstrelaControlador>().apagar();
-        estrelaMeio.GetComponent<EstrelaControlador>().apagar();
-    }
-
-    private void acenderEstrelas() {
-        estrelaDireita.GetComponent<EstrelaControlador>().acender();
-        estrelaEsquerda.GetComponent<EstrelaControlador>().acender();
-        estrelaMeio.GetComponent<EstrelaControlador>().acender();
-    }
-
-    private void apagarUma() {
-        estrelaDireita.GetComponent<EstrelaControlador>().apagar();
-    }
-
-    private void apagarDuas() {
-        estrelaEsquerda.GetComponent<EstrelaControlador>().apagar();
-        estrelaDireita.GetComponent<EstrelaControlador>().apagar();
-    }
-
-
     private bool verifyResult()
     {
         return NucleoController.instance().currentEquation.verificarResultado() ;

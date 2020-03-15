@@ -98,8 +98,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/view/FormuleListAdapter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/Roulette.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/NucleoController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/controller/BalanceamentoController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/Formule.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/controller/EstrelaControlador.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/controller/StarsController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/controller/BalanceamentoController.cs" />
       </list>
     </option>
   </component>
