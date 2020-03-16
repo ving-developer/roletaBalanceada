@@ -271,7 +271,7 @@ PrefabInstance:
     - target: {fileID: 7369312637929379351, guid: 322895d6c0c89c1458382caee16b5c93,
         type: 3}
       propertyPath: m_Text
-      value: Uhuuu Terminou
+      value: "Parab\xE9ns"
       objectReference: {fileID: 0}
     - target: {fileID: 8731872958858423456, guid: 322895d6c0c89c1458382caee16b5c93,
         type: 3}
@@ -1403,7 +1403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputText: {fileID: 829318974}
   sufix: {fileID: 1225674947}
-  title: {fileID: 0}
+  congratulationsText: {fileID: 8250688708100995528}
 --- !u!1001 &2095274808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1706,7 +1706,12 @@ PrefabInstance:
     - target: {fileID: 2482462815795701268, guid: 3826afec8188fd94aa52e9cb8bc0f4a6,
         type: 3}
       propertyPath: m_Text
-      value: "Voc\xEA ficou na posi\xE7\xE3o"
+      value: "Voc\xEA ficou na posi\xE7\xE3o:"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2482462815795701268, guid: 3826afec8188fd94aa52e9cb8bc0f4a6,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3618114230738702565, guid: 3826afec8188fd94aa52e9cb8bc0f4a6,
         type: 3}
@@ -1771,7 +1776,7 @@ PrefabInstance:
     - target: {fileID: 3618114230738702565, guid: 3826afec8188fd94aa52e9cb8bc0f4a6,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -358.99994
+      value: -322.12
       objectReference: {fileID: 0}
     - target: {fileID: 3618114230738702565, guid: 3826afec8188fd94aa52e9cb8bc0f4a6,
         type: 3}
@@ -1781,7 +1786,7 @@ PrefabInstance:
     - target: {fileID: 3618114230738702565, guid: 3826afec8188fd94aa52e9cb8bc0f4a6,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 33.4
+      value: 107.15
       objectReference: {fileID: 0}
     - target: {fileID: 3618114230738702565, guid: 3826afec8188fd94aa52e9cb8bc0f4a6,
         type: 3}
@@ -1831,3 +1836,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 8250688708100995526}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8250688708100995528 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2482462815795701268, guid: 3826afec8188fd94aa52e9cb8bc0f4a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 8250688708100995526}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

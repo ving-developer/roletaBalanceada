@@ -79,7 +79,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/view/ConfettiSpritesAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/BlastConfetti.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/Window_Confetti.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/view/WinScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/RulesListAdapter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/ConfigurationsList.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/Clock.cs" />
@@ -90,19 +89,20 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/view/MoleculeQuanityAdapter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/SorteioMotor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/ResultScreen.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/controller/ParabensController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/modelo/MoleculaForma.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/modelo/Equacao.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/ControladorEquacoes.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/PrincipalController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/modelo/Conexoes.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/FormuleListAdapter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/view/Roulette.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/NucleoController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/Formule.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/EstrelaControlador.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/StarsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/BalanceamentoController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/controller/ParabensController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/view/WinScreen.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/view/Roulette.cs" />
       </list>
     </option>
   </component>
@@ -173,7 +173,7 @@
       <workItem from="1582649569654" duration="6609000" />
       <workItem from="1583010603932" duration="1813000" />
       <workItem from="1583107281114" duration="5849000" />
-      <workItem from="1584279634089" duration="1384000" />
+      <workItem from="1584279634089" duration="5004000" />
     </task>
     <servers />
   </component>

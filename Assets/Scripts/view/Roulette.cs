@@ -10,6 +10,7 @@ using Random = System.Random;
 
 public class Roulette : MonoBehaviour
 {
+    public GameObject hightlightedEfect;
     public GameObject roulette; 
     public GameObject spinner;
     private bool spinnerDirection;
@@ -34,6 +35,7 @@ public class Roulette : MonoBehaviour
 
     public void sortRoulette()
     {
+        Destroy(hightlightedEfect);
         Destroy(spinner.GetComponent<Button>());
         isRotate = true;
         speed = 11 * new System.Random().Next(10, 40);

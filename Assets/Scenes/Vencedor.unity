@@ -509,7 +509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -8, y: -47}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1071786920
@@ -813,6 +813,26 @@ PrefabInstance:
       propertyPath: m_OverrideSorting
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3244558635971794711, guid: 322895d6c0c89c1458382caee16b5c93,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -10.399994
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244558635971794711, guid: 322895d6c0c89c1458382caee16b5c93,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 19.099998
+      objectReference: {fileID: 0}
+    - target: {fileID: 7369312637929379351, guid: 322895d6c0c89c1458382caee16b5c93,
+        type: 3}
+      propertyPath: m_Text
+      value: Vencedor
+      objectReference: {fileID: 0}
+    - target: {fileID: 7369312637929379351, guid: 322895d6c0c89c1458382caee16b5c93,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 8731872958858423456, guid: 322895d6c0c89c1458382caee16b5c93,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -876,7 +896,7 @@ PrefabInstance:
     - target: {fileID: 8731872958858423456, guid: 322895d6c0c89c1458382caee16b5c93,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -187
+      value: 285
       objectReference: {fileID: 0}
     - target: {fileID: 8731872958858423456, guid: 322895d6c0c89c1458382caee16b5c93,
         type: 3}
@@ -896,7 +916,7 @@ PrefabInstance:
     - target: {fileID: 8731872958858423456, guid: 322895d6c0c89c1458382caee16b5c93,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8731872958858423456, guid: 322895d6c0c89c1458382caee16b5c93,
         type: 3}
@@ -906,7 +926,7 @@ PrefabInstance:
     - target: {fileID: 8731872958858423456, guid: 322895d6c0c89c1458382caee16b5c93,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8731872958858423456, guid: 322895d6c0c89c1458382caee16b5c93,
         type: 3}

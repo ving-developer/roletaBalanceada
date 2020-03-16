@@ -9,7 +9,7 @@ public class ParabensController : MonoBehaviour
 {
     public InputField inputText;
     public Text sufix;
-    public Text title;
+    public Text congratulationsText;
     
     // Start is called before the first frame update
     void Start(){
@@ -19,7 +19,7 @@ public class ParabensController : MonoBehaviour
     }
 
     private void adjustTitle(){
-        title.text = title.text + "\n"+NucleoController.instance().jogadores[0].Nome;
+        congratulationsText.text = "Parabéns, "+NucleoController.instance().jogadores[0].Nome+"!\n"+congratulationsText.text;
     }
 
     private void adjustSufix(){
