@@ -11,6 +11,8 @@ namespace controller
         {
             Debug.Log(Application.persistentDataPath);
             NucleoController.instance().restartAll();
+            ScenesMaintenerController.Instance.playMainSound();
+            ScenesMaintenerController.Instance.playBubbleSound();
         }
         
         public void umJogador()

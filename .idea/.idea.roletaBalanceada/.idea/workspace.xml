@@ -38,6 +38,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/PontuacaoController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/BalanceamentoController.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/modelo/Conexoes.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/ScenesMaintenerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/PrincipalController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/NucleoController.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/modelo/Equacao.cs" root0="FORCE_HIGHLIGHTING" />
@@ -92,7 +93,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/modelo/MoleculaForma.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/modelo/Equacao.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/ControladorEquacoes.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/controller/PrincipalController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/modelo/Conexoes.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/FormuleListAdapter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/NucleoController.cs" />
@@ -103,6 +103,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/ParabensController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/WinScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/Roulette.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/controller/PrincipalController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/controller/ScenesMaintenerController.cs" />
       </list>
     </option>
   </component>
@@ -174,6 +176,7 @@
       <workItem from="1583010603932" duration="1813000" />
       <workItem from="1583107281114" duration="5849000" />
       <workItem from="1584279634089" duration="5004000" />
+      <workItem from="1584497132865" duration="5527000" />
     </task>
     <servers />
   </component>

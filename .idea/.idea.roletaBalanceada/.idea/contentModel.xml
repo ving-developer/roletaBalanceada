@@ -21,6 +21,7 @@
             <e p="Preference.cs" t="Include" />
             <e p="PrincipalController.cs" t="Include" />
             <e p="RegrasController.cs" t="Include" />
+            <e p="ScenesMaintenerController.cs" t="Include" />
             <e p="SobreController.cs" t="Include" />
             <e p="SorteioMotor.cs" t="Include" />
           </e>
