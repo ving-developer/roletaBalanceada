@@ -5,12 +5,12 @@ namespace controller
 {
     public class PrincipalController : MonoBehaviour
     {
-        
         // Start is called before the first frame update
         void Start()
         {
             Debug.Log(Application.persistentDataPath);
             NucleoController.instance().restartAll();
+            ScenesMaintenerController.Instance.stopAllSounds("music2");
             ScenesMaintenerController.Instance.playMainSound();
             ScenesMaintenerController.Instance.playBubbleSound();
         }

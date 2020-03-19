@@ -13,6 +13,7 @@ public class ParabensController : MonoBehaviour
     
     // Start is called before the first frame update
     void Start(){
+        ScenesMaintenerController.Instance.playMainThirdSound();
         TouchScreenKeyboard.Open("", TouchScreenKeyboardType.NamePhonePad, false, false, true);
         adjustSufix();
         adjustTitle();

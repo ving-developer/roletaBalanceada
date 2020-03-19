@@ -15,10 +15,9 @@ public class Roulette : MonoBehaviour
     public GameObject spinner;
     private bool spinnerDirection;
     public static bool isRotate;
-    public AudioSource piao;
-    public AudioSource escolhida;
     private int speed;
     private int trueSpeed;
+    private ScenesMaintenerController maintenerInstance = ScenesMaintenerController.Instance;
 
     // Start is called before the first frame update
     void Start(){
@@ -35,6 +34,8 @@ public class Roulette : MonoBehaviour
 
     public void sortRoulette()
     {
+        maintenerInstance.stopMainSound();
+        maintenerInstance.playRouletteSound();
         Destroy(hightlightedEfect);
         Destroy(spinner.GetComponent<Button>());
         isRotate = true;
@@ -102,8 +103,8 @@ public class Roulette : MonoBehaviour
     private int verifyResult()
     {
         float angle = roulette.GetComponent<Transform>().localEulerAngles.z;
-        piao.Stop();
-        escolhida.Play();
+        maintenerInstance.stopRouletteSound();
+        maintenerInstance.playPunchLineSound();
         if (angle <= 45){//vermelho de baixo
             SceneManager.LoadScene(1);
             return 1;
@@ -130,7 +131,6 @@ public class Roulette : MonoBehaviour
             SceneManager.LoadScene(1);
             return 8;
         }
-        
     }
 
     private void moveSpinner(int velocity)

@@ -4,9 +4,6 @@ using UnityEngine.UI;
 
 public class BalanceamentoController : MonoBehaviour
 {
-    public AudioSource errou;
-    public AudioSource acertou;
-    public AudioSource backgroundSound;
     public GameObject starPrefab;
 
     public Text tituloResposta;
@@ -16,10 +13,11 @@ public class BalanceamentoController : MonoBehaviour
     private float tempoJogada;
     private int numberOfStars;
     private int starsSpawned;
+    private ScenesMaintenerController maintenerInstance = ScenesMaintenerController.Instance;
 
     public void Start() {
         tempoJogada = 0; 
-        playSound();
+        maintenerInstance.playBalanceamentoSound();
     }
 
     private void Update(){
@@ -87,7 +85,7 @@ public class BalanceamentoController : MonoBehaviour
 
     public void sendResult()
     {
-        stopAllSounds();
+        maintenerInstance.stopBalanceamentoSound();
         ((Clock)clock.GetComponent("Clock")).stopClock();
         NucleoController nucleo = NucleoController.instance();
         nucleo.rodada++;
@@ -104,9 +102,9 @@ public class BalanceamentoController : MonoBehaviour
             arrumarEstrelas(valorPercentual);
             nucleo.jogadores[nucleo.jogada].addPontuacao(valorPontuado);
             tituloResposta.text = "Parabéns!";
-            acertou.Play();
+            maintenerInstance.playAcertouSound();
         } else{
-            errou.Play();
+            maintenerInstance.playErrouSound();
             tituloResposta.text = "Errou!";
             nucleo.jogadores[nucleo.jogada].addPontuacao(nucleo.pontuacaoErro);
         }
@@ -141,15 +139,5 @@ public class BalanceamentoController : MonoBehaviour
     public static void removeAllFormules()
     {
         formules = new List<GameObject>();
-    }
-
-    public void playSound()
-    {
-        backgroundSound.Play();
-    }
-
-    private void stopAllSounds()
-    {
-        backgroundSound.Stop();
     }
 }

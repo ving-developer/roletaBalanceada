@@ -84,11 +84,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/view/ConfigurationsList.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/Clock.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/Preference.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/controller/ConfigController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/modelo/Jogador.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controladores/controladorPrimeiraTela.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/MoleculeQuanityAdapter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/controller/SorteioMotor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/ResultScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/modelo/MoleculaForma.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/modelo/Equacao.cs" />
@@ -99,12 +97,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/view/Formule.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/EstrelaControlador.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/StarsController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/controller/BalanceamentoController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/controller/ParabensController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/view/WinScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/view/Roulette.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/controller/PrincipalController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/controller/BalanceamentoController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/controller/SorteioMotor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/controller/ConfigController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/view/WinScreen.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/controller/ParabensController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/ScenesMaintenerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/controller/PrincipalController.cs" />
       </list>
     </option>
   </component>
@@ -176,7 +176,8 @@
       <workItem from="1583010603932" duration="1813000" />
       <workItem from="1583107281114" duration="5849000" />
       <workItem from="1584279634089" duration="5004000" />
-      <workItem from="1584497132865" duration="5527000" />
+      <workItem from="1584497132865" duration="5720000" />
+      <workItem from="1584573961400" duration="6211000" />
     </task>
     <servers />
   </component>

@@ -13,6 +13,7 @@ public class WinScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ScenesMaintenerController.Instance.playMainThirdSound();
         NucleoController nucleo = NucleoController.instance();
         Jogador jogador;
         GameObject player;

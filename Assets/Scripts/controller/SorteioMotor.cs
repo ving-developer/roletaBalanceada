@@ -11,11 +11,11 @@ public class SorteioMotor : MonoBehaviour
     public GameObject playerSelector;
     public GameObject jogadorUm;
     public GameObject jogadorDois;
-    public AudioSource piao;
     public Text rodada;
 
     // Start is called before the first frame update
     void Start(){
+        ScenesMaintenerController.Instance.playMainSound();
         NucleoController nucleo = NucleoController.instance();
         rodada.text = nucleo.rodada.ToString();
 

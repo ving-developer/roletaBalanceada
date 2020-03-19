@@ -50,6 +50,61 @@ public class ScenesMaintenerController : MonoBehaviour
             stopSound("bubble sound");
         }
 
+        public void playBalanceamentoSound()
+        {
+            playSound("music3", true);
+        }
+        
+        public void stopBalanceamentoSound()
+        {
+            stopSound("music3");
+        }
+        
+        public void playMainSecondSound()
+        {
+            playSound("music4",true);
+        }
+        
+        public void stopMainSecondSound()
+        {
+            stopSound("music4");
+        }
+        
+        public void playMainThirdSound()
+        {
+            playSound("music1",true);
+        }
+        
+        public void stopMainThirdSound()
+        {
+            stopSound("music1");
+        }
+
+        public void playRouletteSound()
+        {
+            playSound("roulette sound");
+        }
+        
+        public void stopRouletteSound()
+        {
+            stopSound("roulette sound");
+        }
+        
+        public void playPunchLineSound()
+        {
+            playSound("punch line");
+        }
+        
+        public void playErrouSound()
+        {
+            playSound("errou");
+        }
+        
+        public void playAcertouSound()
+        {
+            playSound("acertou");
+        }
+
         #region Metodos genericos e auxiliares
 
             private void stopSound(String key)
@@ -67,6 +122,15 @@ public class ScenesMaintenerController : MonoBehaviour
                 }
             }
 
+            public void stopAllSounds(String keyException = null)
+            {
+                foreach (AudioSource sound in soundsObjects.Values)
+                {
+                    if(keyException!=null ? sound.name!=keyException : true)
+                        sound.Stop();
+                }
+            }
+
         #endregion
         
 
@@ -77,7 +141,6 @@ public class ScenesMaintenerController : MonoBehaviour
 
     private void inicializarAudios()
     {
-        Debug.Log("passou aqui");
         soundsObjects = new Dictionary<string, AudioSource>();
         
         foreach (AudioClip sound in audioClips)
