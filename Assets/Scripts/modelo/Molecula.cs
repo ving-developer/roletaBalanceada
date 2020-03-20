@@ -93,7 +93,7 @@ public class Molecula
         }
 
         foreach(MoleculaCompoe moleculaComp in MoleculasCompoePrimaria){
-            atomosQuantificados.InsertRange(atomosQuantificados.Count, moleculaComp.Secundaria.quantidadeAtomos(balanco));
+            atomosQuantificados.InsertRange(atomosQuantificados.Count, moleculaComp.Secundaria.quantidadeAtomos(balanco* moleculaComp.Quantidade));
         }
 
         return atomosQuantificados;

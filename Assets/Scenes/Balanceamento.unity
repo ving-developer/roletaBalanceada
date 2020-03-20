@@ -226,6 +226,12 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 383182187915904328, guid: acc0aea886908c446b3756e6c625de94,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 38490b0492b4a8e44b63243ca7ee85be,
+        type: 3}
     - target: {fileID: 383182187915904330, guid: acc0aea886908c446b3756e6c625de94,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1477,8 +1483,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34b851e04b557f04fbba6b48c9759cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  errou: {fileID: 0}
-  acertou: {fileID: 0}
   starPrefab: {fileID: 7482193704477614320, guid: ba4e91bbfc7789a4abb532b67ed621e4,
     type: 3}
   tituloResposta: {fileID: 289626554}
@@ -3695,6 +3699,12 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 383182187915904328, guid: acc0aea886908c446b3756e6c625de94,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 38490b0492b4a8e44b63243ca7ee85be,
+        type: 3}
     - target: {fileID: 383182187915904330, guid: acc0aea886908c446b3756e6c625de94,
         type: 3}
       propertyPath: m_LocalPosition.x
