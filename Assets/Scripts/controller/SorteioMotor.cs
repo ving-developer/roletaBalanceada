@@ -17,6 +17,7 @@ public class SorteioMotor : MonoBehaviour
     void Start(){
         ScenesMaintenerController.Instance.playMainSound();
         NucleoController nucleo = NucleoController.instance();
+        nucleo.zerarPontuacoes();
         rodada.text = nucleo.rodada.ToString();
 
         if (nucleo.jogadores.Count==1){

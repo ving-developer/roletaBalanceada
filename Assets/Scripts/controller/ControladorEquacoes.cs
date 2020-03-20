@@ -60,6 +60,7 @@ public class ControladorEquacoes {
         while(count < 30){
             int indice = random.Next(0, quantidade - 1); //Quantidade tem um a mais que o vetor
             if (!listaEquacao[indice].Utilizada){
+                listaEquacao[indice].Utilizada = true;
                 return listaEquacao[indice];
             } 
             count++;

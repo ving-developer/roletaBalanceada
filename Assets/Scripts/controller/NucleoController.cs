@@ -49,28 +49,30 @@ public class NucleoController
 
     public void acaoAmarelo(){
         currentEquation = ControladorEquacoes.instance().pegarEquacao("Médio");
-        pontuacaoAcerto = 30;
-        pontuacaoErro = 0;
+        pontuacaoAcerto += 30;
     }
 
     public void acaoAzul() {
         currentEquation = ControladorEquacoes.instance().pegarEquacao("Facil");
-        pontuacaoAcerto = 10;
-        pontuacaoErro = 0;
+        pontuacaoAcerto += 10;
     }
 
     public void acaoVermelho() {
         currentEquation = ControladorEquacoes.instance().pegarEquacao("Dificil");
-        pontuacaoAcerto = 40;
-        pontuacaoErro = 0;
+        pontuacaoAcerto += 40;
     }
 
     public void acaoVerde() {
         executarAcao(new System.Random().Next(1, 7));
-        pontuacaoAcerto = 50;
-        pontuacaoErro = -20;
+        pontuacaoAcerto += 20;
+        pontuacaoErro += -20;
     }
 
+
+    public void zerarPontuacoes() {
+        pontuacaoAcerto = 0;
+        pontuacaoErro = 0;
+    }
 
     public void executarAcao(int acao) {
         if (acao == 1 || acao == 5){

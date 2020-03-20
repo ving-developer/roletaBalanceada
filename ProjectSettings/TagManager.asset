@@ -15,7 +15,7 @@ TagManager:
   - 
   - Background
   - Retangulo
-  - FIm
+  - Fim
   - Componentes
   - Botoes
   - Telas Sobrepostas
@@ -43,4 +43,7 @@ TagManager:
     locked: 0
   - name: Retangulo
     uniqueID: 439530589
+    locked: 0
+  - name: Fim
+    uniqueID: 739642771
     locked: 0
