@@ -7,6 +7,7 @@ public class BalanceamentoController : MonoBehaviour
     public GameObject starPrefab;
 
     public Text tituloResposta;
+    public Text placarTexto;
     public GameObject ResultScreen;
     public RectTransform clock;
     private static List<GameObject> formules;
@@ -100,12 +101,14 @@ public class BalanceamentoController : MonoBehaviour
             Debug.Log(valorPercentual);
             int valorPontuado = (nucleo.pontuacaoAcerto * valorPercentual/100 ) + 5;
             arrumarEstrelas(valorPercentual);
+            placarTexto.text = valorPontuado + "";
             nucleo.jogadores[nucleo.jogada].addPontuacao(valorPontuado);
             tituloResposta.text = "Parabéns!";
             maintenerInstance.playAcertouSound();
         } else{
             maintenerInstance.playErrouSound();
             tituloResposta.text = "Errou!";
+            placarTexto.text = nucleo.pontuacaoErro + "";
             nucleo.jogadores[nucleo.jogada].addPontuacao(nucleo.pontuacaoErro);
         }
         tempoJogada = 0;//zerou o tempo para ser usado na contagem da tela de resultado
