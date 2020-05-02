@@ -9,12 +9,14 @@ using System;
 
 public class Conexoes {
     private static string filepath = Application.persistentDataPath + "/bancoQuimico.db";
+    
     private static string urlDataBase = "URI=file:"+ filepath;
     //private static string urlDataBase = "URI=file:bancoQuimico.db";
     private static IDbConnection _connection = null;
 
     public static IDataReader pegarReader(string query) {
         //Debug.Log(Application.persistentDataPath);
+        /////C:/Users/luizloja/AppData/LocalLow/IFG/roletaBalanceada/bancoQuimico.db
         if (!File.Exists(filepath))
         {
             // UNITY_ANDROID
@@ -24,6 +26,7 @@ public class Conexoes {
             File.WriteAllBytes(filepath, loadDB.bytes);
 
         }
+        
 
         /* if (!File.Exists(filepath)){
 

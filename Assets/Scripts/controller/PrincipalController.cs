@@ -8,7 +8,9 @@ namespace controller
         // Start is called before the first frame update
         void Start()
         {
-            Debug.Log(Application.persistentDataPath);
+            //Debug.Log(Application.persistentDataPath);
+            //Molecula.ImprimirMoleculas();
+            Equacao.ImprimirEquacoes();
             NucleoController.instance().restartAll();
             ScenesMaintenerController.Instance.stopAllSounds("music2");
             ScenesMaintenerController.Instance.playMainSound();

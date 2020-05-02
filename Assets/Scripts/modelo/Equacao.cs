@@ -57,6 +57,15 @@ public class Equacao{
     }
 
 
+    public static void ImprimirEquacoes() {
+        Dictionary<int, Equacao> equacoes = todasEquacoes();
+        string s = "";
+        foreach(Equacao equacao in equacoes.Values){
+            s +=  $"\n{equacao.Id} -> {equacao.ToString()}";
+        }
+        Debug.Log(s);
+            
+    }
 
     override
     public string ToString() {

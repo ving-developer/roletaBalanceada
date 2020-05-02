@@ -82,6 +82,15 @@ public class Molecula
     }
 
 
+    public static void ImprimirMoleculas() {
+        Dictionary<int, Molecula> moleculas = todasMoleculas();
+        string s = "";
+        foreach(Molecula m in moleculas.Values){
+            s += $"{m.Id}-> {m.ToString()}\n";
+        }
+        Debug.Log(s);
+    }
+
 
     public List<AtomoQuantificado> quantidadeAtomos(int balanco) {
         List<AtomoQuantificado> atomosQuantificados = new List<AtomoQuantificado>();
